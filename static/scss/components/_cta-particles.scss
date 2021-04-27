@@ -1,0 +1,19 @@
+.cta-particles{
+  width: 100%;
+  background: linear-gradient(201deg, rgba(2,0,36,1) 0%, rgba(0,136,255,1) 100%);
+  &__cta{
+    color: white;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 560px;
+  }
+}
+
+.particles{
+  height: 560px;
+  width: 100%;
+  opacity: .5;
+}

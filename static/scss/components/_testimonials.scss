@@ -1,0 +1,61 @@
+.testimonials{
+  height: 1000px;
+  // background: linear-gradient(201deg, rgba(2,0,36,1) 0%, rgba(0,136,255,1) 100%);
+  background: #000b33;
+  &__header{
+    border-bottom: 2px solid white;
+    padding-top: 3rem;
+    color: white;
+    width: $container-lg;
+    margin-left:auto;
+    margin-right: auto;
+  }
+  &__container{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 24px;
+    width: $container-lg;
+    height: 80%;
+    margin: auto;
+    padding-top: 3rem;
+    @include mobile{
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  &__quote{
+    background-repeat: repeat-x;
+    background-size: contain;
+    animation: loop 10s linear infinite;
+  }
+  &__scrim{
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: .8;
+  }
+  &__content{
+    width: 80%;
+    color: white;
+  }
+  &__person{
+  text-align: right;
+  margin-left: auto;
+  margin-right: auto;
+  }
+  &__industry{
+    text-align: right;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+ @keyframes loop{
+	from { background-position: 0 0; }
+  to { background-position: -400px 0; }
+}

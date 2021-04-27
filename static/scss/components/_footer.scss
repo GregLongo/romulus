@@ -1,0 +1,11 @@
+.footer{
+  display: flex;
+  align-items: center;
+  height: $footer-height;
+  background-color: $color-swatch-caesar-3;
+  color: $text-color-light;
+  &__container{
+    width: $container-lg;
+    margin: auto;
+  }
+}

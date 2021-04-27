@@ -1,0 +1,41 @@
+//Break on small mobile
+@mixin small{
+  @media (min-width: #{$small}) {
+    @content;
+  }
+}
+
+//Break on mobile
+@mixin mobile{
+  @media (min-width: #{$mobile}) {
+    @content;
+  }
+}
+
+// Break on tablet
+@mixin tablet{
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+// Break on desktop
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+// Break on desktop
+@mixin widescreen{
+  @media (min-width: #{$desktop-wide}) {
+    @content;
+  }
+}
+
+// Break on desktop
+@mixin xl{
+  @media (min-width: #{$desktop-xl}) {
+    @content;
+  }
+}

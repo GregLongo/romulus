@@ -1,0 +1,18 @@
+{% extends "base.twig" %}
+
+{% block content %}
+  {% include "partials/hero-home.twig" %}
+  {% include "partials/twocol.twig" with {
+    lottie:'onboard',
+    textblock: post.meta("textblock1"),
+    direction: 'rtl'
+  }  %}
+  {% include "partials/twocol.twig" with {
+    lottie:'stats',
+    textblock: post.meta("textblock2")
+  }  %}
+  {% include "partials/symbols.twig" %}
+  <div style="height: 700px; background: white">Placeholder</diV>
+  {% include "partials/cta-particles.twig" %}
+  {% include "partials/testimonials.twig" %}
+{% endblock %}

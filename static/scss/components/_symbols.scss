@@ -1,0 +1,19 @@
+.symbols{
+  background: $color-swatch-caesar-3;
+  height: 680px;
+  color: $text-color-light;
+  &__container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    height: 100%;
+    width: $container-lg;
+    margin: auto;
+    @include tablet{
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  &__block{
+    text-align: center;
+  }
+}
