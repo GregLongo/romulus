@@ -6,6 +6,11 @@ var symbol1 = require('../lottie/cube1.json')
 var symbol2 = require('../lottie/cube2.json')
 var symbol3 = require('../lottie/cube3.json')
 var symbol4 = require('../lottie/cube4.json')
+var scienceguy = require('../lottie/scienceguy.json')
+var statsgirl = require('../lottie/statsgirl.json')
+var macguy = require('../lottie/macguy.json')
+var handshake = require('../lottie/handshake.json')
+var messages = require('../lottie/messages.json')
 
 var animations = [
     [home,'home'],
@@ -15,6 +20,11 @@ var animations = [
     [symbol2,'symbol2'],
     [symbol3,'symbol3'],
     [symbol4,'symbol4'],
+    [scienceguy,'scienceguy'],
+    [statsgirl,'statsgirl'],
+    [macguy,'macguy'],
+    [handshake,'handshake'],
+    [messages,'messages']
   ];
 
 jQuery(document).ready(function() {

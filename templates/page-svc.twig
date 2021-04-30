@@ -1,0 +1,32 @@
+{% extends "base.twig" %}
+
+{% block content %}
+  {% include "partials/hero-svc.twig" %}
+  <span id="svc1">
+  {% include "partials/twocol.twig" with {
+    lottie:'scienceguy',
+    textblock: post.meta("textblock1"),
+    direction: 'rtl'
+  }  %}
+  </span>
+  <span id="svc2">
+  {% include "partials/twocol.twig" with {
+    lottie:'statsgirl',
+    textblock: post.meta("textblock2")
+  }  %}
+  </span>
+  <span id="svc3">
+  {% include "partials/twocol.twig" with {
+    lottie:'macguy',
+    textblock: post.meta("textblock3"),
+    direction: 'rtl'
+  }  %}
+  </span>
+  <span id="svc4">
+  {% include "partials/twocol.twig" with {
+    lottie:'handshake',
+    textblock: post.meta("textblock4")
+  }  %}
+  </span>
+  {% include "partials/cta-particles.twig" %}
+{% endblock %}

@@ -1,0 +1,70 @@
+.team{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: $container-lg;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 120px;
+  &__page{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fill);
+    grid-gap: 80px;
+  }
+  &__teammate{
+    cursor: pointer;
+    &-img{
+      &--lg{
+        width: 100%;
+      }
+    }
+    &-bio{
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      margin-left: auto;
+    }
+    &-scrim{
+      height: 0px;
+      width: 0px;
+      opacity: .8;
+      right: 0;
+      bottom: 5px;
+      position: absolute;
+
+      border-left: 100px solid transparent;
+    }
+  }
+
+}
+
+
+
+// /* Style the tab content */
+// .tabcontent {
+//   padding: 6px 12px;
+//   border: 1px solid #ccc;
+//   border-top: none;
+// }
+
+//
+.tab {
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
+  background-color: grey;
+  &:hover{
+    background-color: darkgrey;
+  }
+  &.selected{
+    background-color: $color-swatch-caesar-2;
+  }
+}
+
+
+
+         .hide{
+         display:none
+         }
