@@ -32,6 +32,7 @@ class StarterSite extends Timber\Site {
 
 	function register_post_types() {
 		//this is where you can register custom post types
+
 	}
 
 	function register_taxonomies() {
@@ -50,7 +51,7 @@ class StarterSite extends Timber\Site {
 		$twig->addExtension( new Twig_Extension_StringLoader() );
 		return $twig;
 	}
-	
+
 }
 
 new StarterSite();

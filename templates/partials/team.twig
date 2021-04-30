@@ -1,0 +1,34 @@
+<div class="team">
+  <div class="team__members">
+    <div class="team__wrapper">
+    {% for page in post.meta('team')|batch(6, "null") %}
+      <button id="tab-{{loop.index}}" class="tab" ></button>
+    {% endfor %}
+    {% for page in post.meta('team')|batch(6, "null") %}
+    <div id="tab-{{loop.index }}_content" class="team__page">
+    {% for teammate in page %}
+      <div class="team__teammate">
+      <div style="position:relative">
+          <img src="{{Image(teammate.image).src}}" />
+          <div class="team__teammate-scrim" style="border-bottom:100px solid {{teammate.scrimcolor}}" ></div>
+          </div>
+        <span class="icon-home"></span>
+        <div class="team__teammate-name">{{teammate.name}}</div>
+        <div class="team__teammate-name">{{teammate.title}}</div>
+      </div>
+    {% endfor %}
+    </div>
+    {% endfor %}
+    </div>
+  </div>
+  <div class="team__bio">
+  {% for teammate in post.meta('team') %}
+    <div id="member-{{loop.index0 }}_content" class="team__teammate-bio">
+      <img class="team__teammate-img--lg" src="{{Image(teammate.image).src}}" />
+      <div class="team__teammate-name">{{teammate.name}}</div>
+      <div class="team__teammate-name">{{teammate.title}}</div>
+      <div class="team__teammate-name">{{teammate.bio}}</div>
+    </div>
+  {% endfor %}
+  </div>
+</div>
