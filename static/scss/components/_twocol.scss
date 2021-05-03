@@ -21,12 +21,30 @@
         position: absolute;
         z-index: -1;
       }
+      .textblock{
+        &__heading{
+          @include heading-md-lt;
+          margin-bottom: 1.5rem;
+        }
+        &__text{
+          @include body-txt-lt;
+        }
+      }
     }
   }
   &__textblock{
     grid-row:1;
     @include mobile{
       grid-row:unset;
+    }
+    .textblock{
+      &__heading{
+        @include heading-md;
+        margin-bottom: 1.5rem;
+      }
+      &__text{
+        @include body-txt;
+      }
     }
   }
 }

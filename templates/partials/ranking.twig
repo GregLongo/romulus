@@ -1,0 +1,17 @@
+<div class="ranking">
+<div class="ranking__heading">Top Posts</div>
+{% for item in topposts %}
+<a href="{{item.link}}">
+  <div class="ranking__card">
+    <div class="ranking__img">
+      <span class="ranking__badge">{{loop.index}}</span>
+      <img src="{{item.thumbnail.src}}" />
+    </div>
+    <div class="ranking__content">
+      <div class="ranking__title">{{item.title}}</div>
+      <div class="ranking__category">{{item.category}}</div>
+    </div>
+  </div>
+</a>
+{% endfor %}
+  </div>

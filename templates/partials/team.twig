@@ -2,7 +2,7 @@
   <div class="team__members">
     <div class="team__wrapper">
     {% for page in post.meta('team')|batch(6, "null") %}
-      <button id="tab-{{loop.index}}" class="tab" ></button>
+      <button id="tab-{{loop.index}}" class=" tab team-tab" ></button>
     {% endfor %}
     {% for page in post.meta('team')|batch(6, "null") %}
     <div id="tab-{{loop.index }}_content" class="team__page">

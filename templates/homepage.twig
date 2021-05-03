@@ -12,7 +12,9 @@
     textblock: post.meta("textblock2")
   }  %}
   {% include "partials/symbols.twig" %}
-  <div style="height: 700px; background: white">Placeholder</diV>
+  <div class="blog-preview--home">
+    {% include "partials/blog-preview-simple.twig" with {subset: recentposts} %}
+  </diV>
   {% include "partials/cta-particles.twig" %}
   {% include "partials/testimonials.twig" %}
 {% endblock %}
