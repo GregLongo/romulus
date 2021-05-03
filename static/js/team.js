@@ -1,6 +1,5 @@
-//wait till the page loads
 $(function() {
-  $(".tab:first-of-type").addClass("selected");
+  $(".team-tab:first-of-type").addClass("selected");
   $(".team__page").hide();
   $(".team__page:first-of-type").show();
 
@@ -10,11 +9,10 @@ $(function() {
     $(this).attr('id', 'member-' + index);
   });
 
-
-	$(".tab").click(function () {
+	$(".team-tab").click(function () {
 		var tabId = this.id;
-		var contentId = this.id + "_content"; //figure out the id of the corresonding article element by appending "_content" to the id
-		$(".tab").removeClass("selected");
+		var contentId = this.id + "_content";
+		$(".team-tab").removeClass("selected");
 		$("#" + tabId).addClass("selected");
     $(".team__page").hide();
     $("#" + contentId).show();
@@ -23,13 +21,10 @@ $(function() {
   $(".team__teammate").click(function () {
     var memberId = this.id;
     // alert("#" + memberId);
-		var memberContentId = this.id + "_content"; //figure out the id of the corresonding article element by appending "_content" to the id
+		var memberContentId = this.id + "_content";
 		$(".team__teammate").removeClass("selected");
 		$("#" + memberId).addClass("selected");
     $(".team__teammate-bio").hide();
     $("#" + memberContentId).show();
   });
-
-
-
 });

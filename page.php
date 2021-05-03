@@ -24,5 +24,36 @@
 $context = Timber::context();
 
 $timber_post     = new Timber\Post();
+
+
 $context['post'] = $timber_post;
+
+//query top posts
+$popular_posts_args = array(
+   'posts_per_page' => 5,
+   'meta_key' => 'my_post_viewed',
+   'orderby' => 'meta_value_num',
+   'order'=> 'DESC'
+);
+
+$popular_posts_loop = Timber::get_posts($popular_posts_args);
+
+$context ['topposts'] =$popular_posts_loop;
+
+//query recent posts
+$recent_posts_args = array(
+   'posts_per_page' => 8,
+   'order'=> 'DESC'
+);
+$recent_posts_loop = Timber::get_posts($recent_posts_args);
+$context ['recentposts'] =$recent_posts_loop;
+
+//query all posts
+$all_posts_args = array(
+   'order'=> 'DESC'
+);
+$all_posts_loop = Timber::get_posts($all_posts_args);
+$context ['allposts'] =$all_posts_loop;
+
+
 Timber::render( array( 'page-' . $timber_post->post_name . '.twig', 'page.twig' ), $context );

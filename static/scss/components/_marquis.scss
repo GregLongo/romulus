@@ -1,0 +1,16 @@
+.marquis{
+  min-width: 0;
+  &__title{
+    @include heading-lg-lt;
+    white-space: nowrap;
+    margin-bottom: 1.5rem;
+  }
+  &__subtitle{
+    @include subheading-main-lt;
+    margin-bottom: 1.5rem;
+  }
+  &__blurb{
+   @include body-txt-lt ;
+   margin-bottom: 1.5rem;
+  }
+}

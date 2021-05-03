@@ -70,3 +70,21 @@ add_action('admin_init', 'remove_textarea');
     function remove_textarea() {
             remove_post_type_support( 'page', 'editor' );
     }
+
+
+//count post views
+
+
+function count_post_visits() {
+   if( is_single() ) {
+      global $post;
+      $views = get_post_meta( $post->ID, 'my_post_viewed', true );
+      if( $views == '' ) {
+         update_post_meta( $post->ID, 'my_post_viewed', '1' );
+      } else {
+         $views_no = intval( $views );
+         update_post_meta( $post->ID, 'my_post_viewed', ++$views_no );
+      }
+   }
+}
+add_action( 'wp_head', 'count_post_visits' );

@@ -5,3 +5,4 @@ import './animations';
 import 'particles.js';
 import './load-particles.js';
 import './team.js';
+import './list-posts.js';

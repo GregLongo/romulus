@@ -13,6 +13,17 @@ $context         = Timber::context();
 $timber_post     = Timber::get_post();
 $context['post'] = $timber_post;
 
+$popular_posts_args = array(
+   'posts_per_page' => 5,
+   'meta_key' => 'my_post_viewed',
+   'orderby' => 'meta_value_num',
+   'order'=> 'DESC'
+);
+
+$popular_posts_loop = Timber::get_posts($popular_posts_args);
+
+$context ['topposts'] =$popular_posts_loop;
+
 if ( post_password_required( $timber_post->ID ) ) {
 	Timber::render( 'single-password.twig', $context );
 } else {

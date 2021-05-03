@@ -1,0 +1,66 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<div class="hero hero--post"  style="background-image:url({{post.thumbnail.src}})" >
+<div class="hero__scrim"></div>
+  <div class= "hero__container hero__container--post">
+		{% include "partials/marquis.twig" %}
+    </div>
+</div>
+
+	<div class="blog-preview__list">
+	{% for page in recentposts|batch(4, "null") %}
+		<button id="list-tab-{{loop.index}}" class="tab list-tab" ></button>
+	{% endfor %}
+	{% for page in recentposts|batch(4, "null") %}
+	<div id="list-tab-{{loop.index }}_content" class="blog-preview__page blog-preview__page--list">
+	{% for post in page %}
+		<div class="blog-preview" style="background-image:url({{post.thumbnail.src}})" >
+			<div class="blog-preview__content">
+				<div class="blog-preview__title">{{post.title}}</div>
+				<div class="blog-preview__excerpt">{{post.excerpt}}</div>
+			</div>
+		</div>
+	{% endfor %}
+	</div>
+	{% endfor %}
+	</div>
+
+	{% include "partials/cta-particles.twig" %}
+
+	<div class="blog-preview__most-recent">
+	{% for post in allposts|slice(0,2) %}
+		<div class=" blog-preview__most-recent-{{loop.index}}">
+			<div class="blog-preview blog-preview--recent" style="background-image:url({{post.thumbnail.src}})" >
+				<div class="blog-preview__content blog-preview__content--recent">
+					<div class="blog-preview__title blog-preview__title--recent">{{post.title}}</div>
+					<div class="blog-preview__excerpt blog-preview__excerpt--recent">{{post.excerpt}}</div>
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+	</div>
+	<div class="blog-preview__misc">
+		<div class="blog-preview__list blog-preview__list--more">
+		{% for page in allposts|batch(4, "null") %}
+			<button id="more-tab-{{loop.index}}" class="tab more-tab" ></button>
+		{% endfor %}
+		{% for page in allposts|slice(2)|batch(4, "null") %}
+		<div id="more-tab-{{loop.index }}_content" class="blog-preview__page blog-preview__page--more">
+		{% for post in page %}
+			<div class="blog-preview blog-preview" style="background-image:url({{post.thumbnail.src}})" >
+				<div class="blog-preview__content">
+					<div class="blog-preview__title">{{post.title}}</div>
+					<div class="blog-preview__excerpt">{{post.excerpt}}</div>
+				</div>
+			</div>
+		{% endfor %}
+		</div>
+		{% endfor %}
+		</div>
+		<div class="blog-preview__ranking">
+      {% include "partials/ranking.twig" %}
+		</div>
+</div>
+{% endblock %}

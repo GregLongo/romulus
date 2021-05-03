@@ -5,6 +5,7 @@
   &__container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
     align-items: center;
     height: 100%;
     width: $container-lg;
@@ -15,5 +16,12 @@
   }
   &__block{
     text-align: center;
+  }
+  &__heading{
+    @include heading-sm-lt;
+    margin-bottom: 1rem;
+  }
+  &__text{
+    @include mob-body-txt-lt;
   }
 }

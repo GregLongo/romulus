@@ -36,11 +36,8 @@
 		display: block;
 		padding: 8px 8px;
 		margin-right: $nav-link-margin;
-		font-family: $nav-link-font;
-		font-weight: $nav-link-weight;
-		font-size: $nav-link-size;
-		color: $nav-link-color;
 		text-decoration: none;
+		@include nav-link-lt;
 	}
 	@include tablet {
 		display:flex;

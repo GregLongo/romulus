@@ -1,0 +1,35 @@
+.article{
+  &__wrapper{
+      width: $container-lg;
+      margin-left: auto;
+      margin-right: auto;
+      display: grid;
+      grid-template-columns: 100%;
+      z-index: 3;
+      position: relative;
+      @include tablet{
+        grid-template-columns: 15% 60% 25%;
+      }
+  }
+  &__body{
+    background: white;
+    border-top: 5px solid $color-swatch-caesar-2;
+    margin-top: -6rem;
+    padding: 2rem 4rem 5rem 4rem;
+    @include body-txt;
+    &:first-letter{
+      font-size: 4em;
+      line-height: .6;
+      padding-right: 1rem;
+      float: left;
+    }
+  }
+}
+.post{
+  &__social{
+    // background: blue;
+  }
+  &__rankings{
+    // background-color: deeppink;
+  }
+}

@@ -6,7 +6,7 @@
 @import 'base/mixins-layout';
 @import 'base/mixins-misc';
 @import 'base/resets';
-
+@import 'base/globals';
 
 //==============================================================================
 // Components
@@ -23,11 +23,15 @@
 @import 'components/cta-particles';
 @import 'components/team';
 // @import 'components/section-title';
+@import 'components/article';
+@import 'components/ranking';
+@import 'components/blog-preview';
+@import 'components/marquis';
+
 //
 // //==============================================================================
 // // Layouts
 // //==============================================================================
-// @import 'layouts/footer';
 // @import 'layouts/pages';
 // @import 'layouts/posts';
 // //==============================================================================
@@ -48,5 +52,4 @@
 // //==============================================================================
 //
 // @import 'utilities/tinymce';
-// @import 'components/effects';
 // @import 'components/newsletter';
