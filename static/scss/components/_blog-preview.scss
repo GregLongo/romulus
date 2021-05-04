@@ -47,6 +47,7 @@
         width: 100%;
         clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
         opacity: .7;
+        transition: .14s ease;
       }
     }
     &__container{
@@ -136,5 +137,12 @@
   &--home{
     margin-bottom: $section-spacer-default;
     margin-top: $section-spacer-default;
+  }
+  &:hover{
+    cursor: pointer;
+    .blog-preview__content:before{
+     clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+     height: 102%;
+   }
   }
 }
