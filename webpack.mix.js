@@ -1,5 +1,7 @@
 const mix = require('laravel-mix');
 
+//new comment
+
 
 mix.js('static/js/app.js', 'js')
 	.sass('static/scss/app.scss', 'css')
@@ -12,3 +14,4 @@ mix.js('static/js/app.js', 'js')
 	    jquery: ['$', 'jQuery']
 	})
 	// .copyDirectory('static/svg', 'dist/svg');//incl static assets if needed. extends compile time
+	//
