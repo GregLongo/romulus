@@ -5,13 +5,13 @@
     white-space: nowrap;
     margin-bottom: 1.5rem;
     @include small{
-			white-space: wrap;
+			white-space: normal;
 		}
     @include mobile{
-			white-space: wrap;
+			white-space: normal;
 		}
     @include tablet{
-			white-space: wrap;
+			white-space: normal;
 		}
   }
   &__subtitle{
