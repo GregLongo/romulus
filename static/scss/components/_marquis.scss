@@ -5,6 +5,7 @@
     white-space: nowrap;
     margin-bottom: 1.5rem;
 <<<<<<< HEAD
+<<<<<<< HEAD
     @include small{
 			white-space: normal;
 		}
@@ -14,9 +15,17 @@
     @include tablet{
 			white-space: normal;
 =======
+=======
+    @include small{
+			white-space: wrap;
+		}
+>>>>>>> Maybe fixed white space for mobile title
     @include mobile{
 			white-space: wrap;
 >>>>>>> Maybe fixed white space for mobile title
+		}
+    @include tablet{
+			white-space: wrap;
 		}
   }
   &__subtitle{
