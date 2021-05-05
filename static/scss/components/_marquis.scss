@@ -17,15 +17,19 @@
 =======
 =======
     @include small{
-			white-space: wrap;
+			white-space: normal;
 		}
 >>>>>>> Maybe fixed white space for mobile title
     @include mobile{
+<<<<<<< HEAD
 			white-space: wrap;
 >>>>>>> Maybe fixed white space for mobile title
+=======
+			white-space: normal;
+>>>>>>>  Maybe fixed white space for mobile title
 		}
     @include tablet{
-			white-space: wrap;
+			white-space: normal;
 		}
   }
   &__subtitle{
