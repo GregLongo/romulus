@@ -4,6 +4,7 @@
     @include heading-lg-lt;
     white-space: nowrap;
     margin-bottom: 1.5rem;
+<<<<<<< HEAD
     @include small{
 			white-space: normal;
 		}
@@ -12,6 +13,10 @@
 		}
     @include tablet{
 			white-space: normal;
+=======
+    @include mobile{
+			white-space: wrap;
+>>>>>>> Maybe fixed white space for mobile title
 		}
   }
   &__subtitle{
