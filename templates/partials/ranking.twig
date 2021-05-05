@@ -3,9 +3,8 @@
 {% for item in topposts %}
 <a href="{{item.link}}">
   <div class="ranking__card">
-    <div class="ranking__img">
+    <div class="ranking__img" style="background-image:url({{item.thumbnail.src}})">
       <span class="ranking__badge">{{loop.index}}</span>
-      <img src="{{item.thumbnail.src}}" />
     </div>
     <div class="ranking__content">
       <div class="ranking__title">{{item.title}}</div>

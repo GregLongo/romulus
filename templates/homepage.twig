@@ -13,6 +13,13 @@
   }  %}
   {% include "partials/symbols.twig" %}
   <div class="blog-preview--home">
+    {% include 'partials/section-header.twig' with {
+    title:'Blog',
+    subtitle: 'Something Something',
+    link: '/blog',
+    linktext: 'check it out',
+    button:'true'
+    } %}
     {% include "partials/blog-preview-simple.twig" with {subset: recentposts} %}
   </diV>
   {% include "partials/cta-particles.twig" %}
