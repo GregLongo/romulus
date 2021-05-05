@@ -2,6 +2,7 @@
   &__heading{
     margin-bottom: 2rem;
     text-align: center;
+    @include heading-section;
   }
   &__card{
     margin: auto;
@@ -12,6 +13,7 @@
     grid-template-columns: 35% 65%;
     border: 1px solid black ;
     margin-bottom: 2rem;
+    overflow: hidden;
     @include tablet{
       max-width: 560px;
     }
@@ -22,9 +24,12 @@
   &__img{
     overflow: hidden;
     height: 98%;
+    background-size: cover;
     img{
-      height: 100%;
-      width: 100%;
+      // height: 100%;
+      // width: auto;
+      // height: 100%;
+      // overflow: hidden;
     }
   }
   &__content{

@@ -1,8 +1,13 @@
 <div class="testimonials">
 <div class="testimonials__header">
-	<div class="testimonials__title">{{ post.meta('testimonials-heading') }}</div>
-	<div class="testimonials__subtitle">{{ post.meta('testimonials-subheading')}}</div>
-</div>
+		<div class="section-heading--lt">
+			{% include 'partials/section-header.twig' with {
+			title:'Testimonials',
+			subtitle: 'Something Something',
+			button:'false'
+			} %}
+		</div>
+	</div>
 <div class="testimonials__container">
 <div class="testimonials__quote" style="background-image:url({{Image(post.meta('testimonial1').bg).src}})">
   <div class="testimonials__scrim" style="background-color: #275D5E">

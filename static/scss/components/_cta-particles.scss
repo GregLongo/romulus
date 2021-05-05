@@ -1,4 +1,5 @@
 .cta-particles{
+  @include cta-lt;
   width: 100%;
   background: linear-gradient(201deg, rgba(2,0,36,1) 0%, rgba(0,136,255,1) 100%);
   &__cta{

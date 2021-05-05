@@ -1,0 +1,24 @@
+.section-heading{
+  width: $container-lg;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  &__content{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+  &__title{
+    @include heading-section;
+    margin-right: 2rem;
+  }
+  &__subtitle{
+    @include subheading-section;
+  }
+  &--lt{
+    color: white;
+  }
+}
