@@ -4,6 +4,9 @@
     @include heading-lg-lt;
     white-space: nowrap;
     margin-bottom: 1.5rem;
+    @include mobile{
+			white-space: wrap;
+		}
   }
   &__subtitle{
     @include subheading-main-lt;
