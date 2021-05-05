@@ -4,7 +4,13 @@
     @include heading-lg-lt;
     white-space: nowrap;
     margin-bottom: 1.5rem;
+    @include small{
+			white-space: wrap;
+		}
     @include mobile{
+			white-space: wrap;
+		}
+    @include tablet{
 			white-space: wrap;
 		}
   }
