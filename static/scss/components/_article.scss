@@ -1,4 +1,5 @@
 .article{
+  border-top: 5px solid $color-swatch-caesar-2;
   &__wrapper{
       width: $container-lg;
       margin-left: auto;
@@ -13,10 +14,13 @@
   }
   &__body{
     background: white;
-    border-top: 5px solid $color-swatch-caesar-2;
-    margin-top: -6rem;
-    padding: 2rem 4rem 5rem 4rem;
     @include body-txt-blog;
+    padding: 2rem 0rem 5rem 0rem;
+    @include tablet{
+      margin-top: -6rem;
+      padding: 2rem 4rem 5rem 4rem;
+      border-top: 5px solid $color-swatch-caesar-2;
+    }
     &:first-letter{
       font-size: 4em;
       line-height: .6;

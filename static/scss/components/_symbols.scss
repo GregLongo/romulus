@@ -1,7 +1,9 @@
 .symbols{
   background: $color-swatch-caesar-3;
-  height: 680px;
   color: $text-color-light;
+  @include tablet{
+    height: 560px;
+  }
   &__container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -9,9 +11,12 @@
     align-items: center;
     height: 100%;
     width: $container-lg;
+    padding-top: $section-spacer-default;
+    padding-bottom: $section-spacer-default;
     margin: auto;
     @include tablet{
       grid-template-columns: repeat(4, 1fr);
+      padding: unset;
     }
   }
   &__block{
