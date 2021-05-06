@@ -21,7 +21,10 @@
     button:'true'
     } %}
     {% include "partials/blog-preview-simple.twig" with {subset: recentposts} %}
-  </diV>
+      <div class="button section-heading__button section-heading__button--mobile">
+          <a href='/blog'>check it out</a>
+      </div>
+    </diV>
   {% include "partials/cta-particles.twig" %}
   {% include "partials/testimonials.twig" %}
 {% endblock %}

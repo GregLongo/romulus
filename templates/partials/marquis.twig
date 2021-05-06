@@ -10,7 +10,7 @@
     </div>
     {% if cta == 'visible' %}
 		  <div class="button button--cta">
-			   <a href={{post.meta('cta-link')}}>{{post.meta('cta-text')}}</a>
+			   <a href={{post.meta('cta-link')}}>{{post.meta('cta-text').length(2)}}</a>
 		   </div>
     {% endif %}
 	</div>

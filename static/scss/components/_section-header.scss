@@ -3,13 +3,18 @@
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
   &__content{
     display: flex;
-    flex-direction: row;
-    align-items: baseline;
+    flex-direction: column;
+    margin-bottom: 2em;
+    @include tablet{
+      flex-direction: row;
+      align-items: baseline;
+      margin-bottom: unset;
+    }
   }
   &__title{
     @include heading-section;
@@ -17,6 +22,20 @@
   }
   &__subtitle{
     @include subheading-section;
+  }
+  &__button{
+    &--desktop{
+      visibility: hidden;
+      @include mobile{
+        visibility: visible;
+      }
+    }
+    &--mobile{
+      visibility: visible;
+      @include mobile{
+        visibility: hidden;
+      }
+    }
   }
   &--lt{
     color: white;

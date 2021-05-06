@@ -4,7 +4,7 @@
       <a href="{{post.link}}" class="blog-preview" style="background-image:url({{post.thumbnail.src}})" >
 				<div class="blog-preview__content">
         	<div class="blog-preview__title">{{post.title}}</div>
-					<div class="blog-preview__excerpt">{{post.preview.read_more(false)}}</div>
+					<div class="blog-preview__excerpt">{{post.preview.length(20).read_more(false)}}</div>
 				</div>
 			</a>
   	{% endfor %}

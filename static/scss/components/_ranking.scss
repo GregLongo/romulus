@@ -1,5 +1,6 @@
 .ranking{
   &__heading{
+    margin-top: 2rem;
     margin-bottom: 2rem;
     text-align: center;
     @include heading-section;
@@ -23,7 +24,7 @@
   }
   &__img{
     overflow: hidden;
-    height: 98%;
+    height: 100%;
     background-size: cover;
     img{
       // height: 100%;
@@ -33,7 +34,12 @@
     }
   }
   &__content{
-    padding: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
   }
   &__badge{
     background-color: $color-swatch-caesar-2;
@@ -46,6 +52,16 @@
     color: white;
     transform: translate(-50% , -50%);
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-
+  }
+  &__title{
+    @include heading-tny;
+    margin-bottom: .5rem;
+  }
+  &__category{
+    @include subheading-tny;
+  }
+  a{
+    text-decoration: none !important;
+    color: black;
   }
 }
