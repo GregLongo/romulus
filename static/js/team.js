@@ -24,6 +24,7 @@ $(function() {
 		var memberContentId = this.id + "_content";
 		$(".team__teammate").removeClass("selected");
 		$("#" + memberId).addClass("selected");
+    $(".team__bio-placeholder").hide();
     $(".team__teammate-bio").hide();
     $("#" + memberContentId).show();
   });

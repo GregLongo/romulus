@@ -1,4 +1,17 @@
 <div class='cta-particles'>
-  <span class='cta-particles__cta'>I am a message</span>
+  <span class='cta-particles__cta'>
+  {% if calendly %}
+   <a href='' onclick="Calendly.initPopupWidget({url:'https://calendly.com/greg-tappingbones'});return false;">
+    {{post.meta('cta-particles')}}
+    </a>
+  {% elseif mailcap %}
+    <span>
+      <span> {{post.meta('cta-particles')}} </span>
+      {% include 'partials/mailcap.twig' %}
+    </span>
+  {% else %}
+      <span> {{post.meta('cta-particles')}} </span>
+  {% endif %}
+  </span>
   <div class="particles" id="particles-js"></div>
 </div>

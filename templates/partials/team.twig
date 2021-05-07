@@ -29,7 +29,7 @@
     </div>
   </div>
   <div class="team__bio">
-  <div> I'm a button </div>
+  <div class="team__bio-placeholder" > click on a profile to learn more </div>
   {% for teammate in post.meta('team') %}
     <div id="member-{{loop.index0 }}_content" class="team__teammate-bio">
       <img class="team__teammate-img--lg" src="{{Image(teammate.image).src}}" />

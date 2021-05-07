@@ -28,6 +28,13 @@
       visibility: hidden;
       @include mobile{
         visibility: visible;
+        background-color: $color-swatch-caesar-3;
+        font-size: 1em;
+        padding-left:1em;
+        padding-right: 1em;
+        &:hover{
+          background-color: $color-swatch-caesar-2;
+        }
       }
     }
     &--mobile{
