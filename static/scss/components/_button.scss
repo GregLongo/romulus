@@ -1,0 +1,21 @@
+.button{
+  @include btntxt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a{
+    text-decoration: none;
+    color: white
+  }
+  &--cta{
+    margin-top: 3rem;
+    height: 64px;
+    background: #0095c9;
+    @include tablet{
+      width: 480px;
+    }
+    &:hover{
+        border: 2px solid white outset;
+    }
+  }
+}

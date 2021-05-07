@@ -27,6 +27,7 @@
 @import 'components/ranking';
 @import 'components/blog-preview';
 @import 'components/marquis';
+@import 'components/button';
 
 //
 // //==============================================================================
@@ -46,6 +47,8 @@
 // //==============================================================================
 @import "~mmenu-light/dist/mmenu-light";
 @import 'plugins/hamburgers/hamburgers';
+@import 'plugins/calendly';
+@import 'plugins/mailcap';
 //
 // //==============================================================================
 // // Utilities

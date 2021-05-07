@@ -1,12 +1,15 @@
 .team{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   width: $container-lg;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 120px;
   z-index: 2;
   position: relative;
+  @include tablet{
+    grid-template-columns: repeat(2, 1fr);
+  }
   &__header{
     display: flex;
     justify-content: space-between;
@@ -21,9 +24,12 @@
   }
   &__page{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(auto-fill);
     grid-gap: 80px;
+    @include tablet{
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
   &__teammate{
     img{
@@ -67,7 +73,17 @@
       border-left: 100px solid transparent;
     }
   }
-
+  &__bio{
+    display: none;
+    @include tablet{
+      display: block;      
+    }
+    &-placeholder{
+      margin-top: 35%;
+      text-align: center;
+      font-size: 3em;
+    }
+  }
 }
 
 

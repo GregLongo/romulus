@@ -28,7 +28,7 @@
 	{% endfor %}
 	</div>
 
-	{% include "partials/cta-particles.twig" %}
+	{% include "partials/cta-particles.twig" with {mailcap:true}%}
 
 	<div class="blog-preview__most-recent">
 	{% for post in allposts|slice(0,2) %}

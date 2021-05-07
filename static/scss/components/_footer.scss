@@ -7,5 +7,7 @@
   &__container{
     width: $container-lg;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
   }
 }

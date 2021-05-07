@@ -10,7 +10,9 @@
     </div>
     {% if cta == 'visible' %}
 		  <div class="button button--cta">
-			   <a href={{post.meta('cta-link')}}>{{post.meta('cta-text').length(2)}}</a>
-		   </div>
+			   <a href='' onclick="Calendly.initPopupWidget({url:'https://calendly.com/greg-tappingbones'});return false;">
+				 	{{post.meta('cta-text')}}</a>
+					</a>
+		  </div>
     {% endif %}
 	</div>

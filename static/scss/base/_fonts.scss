@@ -165,3 +165,8 @@
   line-height: 1.7em;
   color: white;
 }
+
+@mixin btntxt{
+  font-family: $font-subheading;
+  font-size: 2.5em;
+}
