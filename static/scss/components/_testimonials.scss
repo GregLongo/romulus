@@ -61,6 +61,6 @@
 
 
  @keyframes loop{
-	from { transform: translateX(0); }
-  to { transform: translateX(-800%); }
+   from { background-position: 0 0; }
+     to { background-position: -400px 0; }
 }

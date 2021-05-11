@@ -120,3 +120,16 @@ function content($limit) {
 
 wp_register_script('calendly', 'https://assets.calendly.com/assets/external/widget.js');
 wp_enqueue_script('calendly' , 'async');
+
+//analytics (dummy tracker)
+function add_analytics(){?>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-QB1ZZMYMP1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-QB1ZZMYMP1');
+	</script>
+	<?php}
+add_action('wp_head', 'add_analytics');
