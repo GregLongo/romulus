@@ -1,5 +1,4 @@
 .cta-particles{
-  @include cta-lt;
   width: 100%;
   background: linear-gradient(201deg, rgba(2,0,36,1) 0%, rgba(0,136,255,1) 100%);
   &__cta{
@@ -13,13 +12,13 @@
     text-align: center;
     z-index: 10;
     flex-direction: column;
-    a{
-      color: white;
-      text-decoration: none;
-      &:hover{
-        color: $color-swatch-caesar-2;
-      }
-    }
+  }
+  &__text{
+    @include cta-lt;
+  }
+  .button--cta{
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 

@@ -9,10 +9,8 @@
       {{post.meta('marquis-blurb')}}
     </div>
     {% if cta == 'visible' %}
-		  <div class="button button--cta">
-			   <a href='' onclick="Calendly.initPopupWidget({url:'https://calendly.com/greg-tappingbones'});return false;">
+		  <button onclick="Calendly.initPopupWidget({url:'https://calendly.com/greg-tappingbones'});return false;" class="button button--cta">
 				 	{{post.meta('cta-text')}}</a>
-					</a>
-		  </div>
+		  </button>
     {% endif %}
 	</div>
