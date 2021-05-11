@@ -14,6 +14,7 @@
     {% for page in post.meta('team')|batch(6, "null") %}
     <div id="tab-{{loop.index }}_content" class="team__page">
     {% for teammate in page %}
+      {% if teammate != 'null' %}
       <div class="team__teammate">
       <div style="position:relative">
           <img src="{{Image(teammate.image).src}}" />
@@ -22,7 +23,9 @@
         <span class="icon-home"></span>
         <div class="team__teammate-name">{{teammate.name}}</div>
         <div class="team__teammate-title">{{teammate.title}}</div>
+        {{teammate}}
       </div>
+    {%  endif %}
     {% endfor %}
     </div>
     {% endfor %}

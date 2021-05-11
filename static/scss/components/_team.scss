@@ -11,10 +11,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
   &__header{
-    display: flex;
     justify-content: space-between;
-  }
-  &__header{
     display: flex;
     flex-direction: row;
     align-items: baseline;
@@ -62,6 +59,7 @@
       flex-direction: column;
       width: 80%;
       margin-left: auto;
+      padding-top: 4.2rem;
     }
     &-scrim{
       height: 0px;
@@ -76,7 +74,7 @@
   &__bio{
     display: none;
     @include tablet{
-      display: block;      
+      display: block;
     }
     &-placeholder{
       margin-top: 35%;
