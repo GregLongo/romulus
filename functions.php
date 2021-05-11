@@ -122,7 +122,7 @@ wp_register_script('calendly', 'https://assets.calendly.com/assets/external/widg
 wp_enqueue_script('calendly' , 'async');
 
 //analytics (dummy tracker)
-function add_analytics(){?>
+function add_analytics(){ ?>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-QB1ZZMYMP1"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
@@ -131,5 +131,5 @@ function add_analytics(){?>
 
 		gtag('config', 'G-QB1ZZMYMP1');
 	</script>
-	<?php}
+	<?php }
 add_action('wp_head', 'add_analytics');
