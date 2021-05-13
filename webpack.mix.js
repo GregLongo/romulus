@@ -15,12 +15,12 @@ mix.js('static/js/app.js', 'js')
 	    jquery: ['$', 'jQuery']
 	})
 // 	.icomoon({
-//     inputPath: 'static/icomoon',
+//     inputPath: 'static/fonts',
 //     publicPath: 'dist',
 //     output: 'fonts',
-//     cssFile: 'static/scss/base/_fonts.scss',
-//     reload: true,
-//     debug: true
+//     cssFile: 'static/css/icomoon.css',
+//
 // });
 	// .copyDirectory('static/svg', 'dist/svg');//incl static assets if needed. extends compile time
 	//
+.copyDirectory('static/icomoon', 'dist/icomoon');
