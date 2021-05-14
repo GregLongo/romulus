@@ -10,4 +10,28 @@
     display: flex;
     justify-content: space-between;
   }
+  &__left{
+    display: flex;
+    align-items: center;
+  }
+  &__social{
+    display: flex;
+  }
+  &__social-logo{
+    font-size: 2em;
+    padding-left: 1em;
+    &:hover{
+      color: $color-swatch-caesar-2;
+    }
+  }
+}
+
+.tappingbones{
+  display: flex;
+  align-items: center;
+  &__logo{
+    height: 32px;
+    width: 32px;
+    margin-left: 1rem;
+  }
 }

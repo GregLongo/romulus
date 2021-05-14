@@ -19,8 +19,8 @@
       <div style="position:relative">
           <img src="{{Image(teammate.image).src}}" />
           <div class="team__teammate-scrim" style="border-bottom:100px solid {{teammate.scrimcolor}}" ></div>
-          </div>
-        <span class="icon-home"></span>
+          <span class="team__teammate-icon fas fa-{{teammate.icon}}"></span>
+        </div>
         <div class="team__teammate-name">{{teammate.name}}</div>
         <div class="team__teammate-title">{{teammate.title}}</div>
         {{teammate}}
@@ -37,7 +37,9 @@
     <div id="member-{{loop.index0 }}_content" class="team__teammate-bio">
       <img class="team__teammate-img--lg" src="{{Image(teammate.image).src}}" />
       <div class="team__teammate-name team__teammate-name--lg">{{teammate.name}}</div>
-      <div class="team__teammate-title team__teammate-title--lg">{{teammate.title}}</div>
+      <div class="team__teammate-title team__teammate-title--lg">{{teammate.title}}
+      <span style="color:{{teammate.scrimcolor}}" class="fas fa-{{teammate.icon}}"></span>
+      </div>
       <div >{{teammate.bio}}</div>
     </div>
   {% endfor %}

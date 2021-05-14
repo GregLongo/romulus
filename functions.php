@@ -133,3 +133,30 @@ function add_analytics(){ ?>
 	</script>
 	<?php }
 add_action('wp_head', 'add_analytics');
+
+//acf options page
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page();
+
+};
+
+add_filter( 'timber_context', 'moshe_timber_context'  );
+
+function moshe_timber_context( $context ) {
+    $context['options'] = get_fields('option');
+    return $context;
+}
+
+//fontawesome (deprecated?)
+
+// function load_icons() {
+// 	wp_enqueue_style(
+// 		'font-awesome-5',
+// 		'https://use.fontawesome.com/releases/v5.15.3/css/all.css',
+// 		array(),
+// 		'5.15.3'
+// 	);
+// }
+//
+// add_action('wp_enqueue_scripts', 'load_icons');
