@@ -8,39 +8,45 @@
     align-items: baseline;
   &__content{
     display: flex;
-    flex-direction: column;
     margin-bottom: 2em;
+    align-items: center;
     @include tablet{
-      flex-direction: row;
       align-items: baseline;
       margin-bottom: unset;
     }
   }
   &__title{
-    @include heading-section;
+    @include heading-md;
+    @include tablet{
+      @include heading-section;
+    }
     margin-right: 2rem;
   }
   &__subtitle{
     @include subheading-section;
   }
   &__button{
+    background-color: $color-swatch-caesar-3;
+    font-size: 1em;
+    padding-left:1em;
+    padding-right: 1em;
+    &:hover{
+      background-color: $color-swatch-caesar-2;
+    }
     &--desktop{
-      visibility: hidden;
-      @include mobile{
-        visibility: visible;
-        background-color: $color-swatch-caesar-3;
-        font-size: 1em;
-        padding-left:1em;
-        padding-right: 1em;
-        &:hover{
-          background-color: $color-swatch-caesar-2;
-        }
+      display: none;
+      @include tablet{
+        display: flex;
       }
     }
     &--mobile{
-      visibility: visible;
-      @include mobile{
-        visibility: hidden;
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 2rem;
+      padding: 1rem;
+      @include tablet{
+        display: none;
       }
     }
   }

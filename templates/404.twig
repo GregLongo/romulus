@@ -1,5 +1,7 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	Sorry, we couldn't find what you're looking for.
+	<div class="fourohfour" style="background-image: url({{ Image(options.img_404).src('large') }})">
+		<p>{{options.txt_404}}</p>
+	</div>
 {% endblock %}

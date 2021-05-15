@@ -1,16 +1,22 @@
 .marquis{
   min-width: 0;
   &__title{
-    @include heading-lg-lt;
+    @include heading-mob-lt;
     white-space: normal;
     margin-bottom: 1.5rem;
+    @include mobile{
+      @include heading-lg-lt;
+    }
     @include tablet{
 			white-space: nowrap;
       }
 	 }
   &__subtitle{
-    @include subheading-main-lt;
+    @include subheading-mob-lt;
     margin-bottom: 1.5rem;
+    @include mobile{
+      @include subheading-main-lt;
+    }
   }
   &__blurb{
    @include body-txt-lt ;

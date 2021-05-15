@@ -2,7 +2,7 @@
 	position: fixed;
 	z-index: $header-z;
 	transition: all $header-affix-transition linear;
-	width: 100%;
+	width: 100vw;
 	height: $header-height-mobile;
 	@include tablet{
 		height: $header-height;
