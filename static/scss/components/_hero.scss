@@ -1,9 +1,12 @@
 .hero{
   width: 100%;
+  height: $hero-height-mobile;
   @include tablet{
     height: $hero-height;
   }
   &__container{
+    overflow-x: hidden;
+    overflow-y: hidden;
     position: relative;
     display: grid;
     grid-template-columns: repeat(1, 1fr);

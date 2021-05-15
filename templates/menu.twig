@@ -5,5 +5,8 @@
 			<a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
 		</li>
 	{% endfor %}
+		<li>
+			<a href='' onclick="Calendly.initPopupWidget({url:'https://calendly.com/greg-tappingbones'});return false;">Contact</a>
+		</li>
 	</ul>
 {% endif %}

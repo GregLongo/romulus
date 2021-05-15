@@ -1,0 +1,16 @@
+.fourohfour{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+	background-color: darkgrey;
+	background-blend-mode: multiply;
+	background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+	font-family: $fourohfour-font;
+	font-size: $fourohfour-font-size;
+	color: $fourohfour-font-color;
+}
