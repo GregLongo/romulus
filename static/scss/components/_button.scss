@@ -15,8 +15,8 @@
     height: 64px;
     background: #0095c9;
     width: 100%;
-    @include tablet{
-      min-width: 480px;
+    @include mobile{
+      width: 480px;
     }
     &:hover{
         outline: 2px solid white;
