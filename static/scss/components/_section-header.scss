@@ -8,11 +8,11 @@
     align-items: baseline;
   &__content{
     display: flex;
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
     align-items: center;
     @include tablet{
       align-items: baseline;
-      margin-bottom: unset;
+      margin-bottom: 1rem;
     }
   }
   &__title{
