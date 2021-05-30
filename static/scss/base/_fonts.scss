@@ -36,14 +36,14 @@
   font-family: $font-heading;
   font-weight: 400;
   color: white;
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 
 @mixin subheading-card{
   font-family: $font-text;
   font-weight: 300;
   color: white;
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 
 @mixin heading-section{
@@ -72,18 +72,18 @@
 @mixin heading-tny{
   font-family: $font-heading;
   font-weight: 300;
-  font-size: 1.25em;
+  font-size: 1em;
 }
 
 @mixin heading-mob-tny{
   font-family: $font-heading;
   font-weight: 300;
-  font-size: 1em;
+  font-size: .85em;
 }
 
 @mixin subheading-tny{
   font-family: $font-subheading;
-  font-size: 1.125em;
+  font-size: .85em;
 }
 
 @mixin body-txt-lt{

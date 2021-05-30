@@ -23,9 +23,24 @@
     }
     &:first-letter{
       font-size: 4em;
-      line-height: .6;
+      line-height: .9;
       padding-right: 1rem;
       float: left;
+    }
+    img{
+      max-width: 100%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    a{
+      text-decoration: underline;
+    }
+    blockquote{
+      color: grey;
+      font-family: $font-subheading;
+      font-size: 1.5em;
+      line-height: 1.4;
     }
   }
 }

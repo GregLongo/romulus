@@ -5,8 +5,8 @@
     height: $hero-height;
   }
   &__container{
-    overflow-x: hidden;
-    overflow-y: hidden;
+    // overflow-x: hidden;
+    // overflow-y: hidden;
     position: relative;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -63,11 +63,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     border-radius: 24px;
     box-shadow: 5px -5px 0px 0px #289FED, 10px -10px 0px 0px #5FB8FF, 15px -15px 0px 0px #A1D8Ff;
     &:hover{
       box-shadow: 4px -4px 0px 0px #289FED, 9px -9px 0px 0px #5FB8FF, 14px -14px 0px 0px #A1D8Ff;
       transform: translate(2px, -2px);
+      color: $color-swatch-caesar-2;
+    }
+    &-icon{
+      font-size: 2em;
+      margin-bottom: .5rem;
     }
   }
   &--post{

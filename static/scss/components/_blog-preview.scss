@@ -31,7 +31,7 @@
     }
  }
     &__content{
-      height: 72px;
+      height: 96px;
       width: 100%;
       padding: 2rem 2rem 2rem 2rem;
       color:  white;
@@ -118,6 +118,12 @@
     position: relative;
     margin-bottom: .5rem;
     @include heading-card;
+    @include tablet{
+      @include heading-mob-tny;
+    }
+    @include widescreen{
+      @include heading-card;
+    }
   }
   &__excerpt{
     z-index: 2;
