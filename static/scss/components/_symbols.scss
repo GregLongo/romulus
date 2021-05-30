@@ -35,4 +35,17 @@
       @include mob-body-txt-lt;
     }
   }
+  &__lottie{
+    height: 200px;
+    margin-bottom: 4rem;
+    &#lottie-symbol1{
+      transform:  translateY(-1.6rem) translateX(1.5rem);
+    }
+    &#lottie-symbol3{
+      transform: scale(.7);
+    }
+    &#lottie-symbol4{
+      transform: scale(.9);
+    }
+  }
 }
