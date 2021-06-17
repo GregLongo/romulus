@@ -166,8 +166,11 @@
 
   }
   &--home{
-    margin-bottom: $section-spacer-default;
+    margin-bottom: $section-spacer-default/2;
     margin-top: $section-spacer-default/2;
+    @include tablet{
+      margin-bottom: $section-spacer-default;
+    }
   }
   &:hover{
     cursor: pointer;

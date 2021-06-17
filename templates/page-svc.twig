@@ -2,29 +2,29 @@
 
 {% block content %}
   {% include "partials/hero-svc.twig" %}
-  <span id="svc1">
+  <span class="svg__col" id="svc1">
   {% include "partials/twocol.twig" with {
-    lottie:'scienceguy',
+    lottie:'helpdesk',
     textblock: post.meta("textblock1"),
     direction: 'rtl'
   }  %}
   </span>
-  <span id="svc2">
+  <span class="svg__col" id="svc2">
   {% include "partials/twocol.twig" with {
-    lottie:'statsgirl',
+    lottie:'onboarding',
     textblock: post.meta("textblock2")
   }  %}
   </span>
-  <span id="svc3">
+  <span class="svg__col" id="svc3">
   {% include "partials/twocol.twig" with {
-    lottie:'macguy',
+    lottie:'security',
     textblock: post.meta("textblock3"),
     direction: 'rtl'
   }  %}
   </span>
-  <span id="svc4">
+  <span class="svg__col" id="svc4">
   {% include "partials/twocol.twig" with {
-    lottie:'handshake',
+    lottie:'compliance',
     textblock: post.meta("textblock4")
   }  %}
   </span>

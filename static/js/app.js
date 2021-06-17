@@ -3,6 +3,7 @@ import './burger';
 import './affix-header';
 import './animations';
 import 'particles.js';
-import './load-particles.js';
-import './team.js';
-import './list-posts.js';
+import './load-particles';
+import './team';
+import './list-posts';
+comsole.log('meow')

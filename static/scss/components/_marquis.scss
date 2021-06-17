@@ -4,7 +4,7 @@
     @include heading-mob-lt;
     white-space: normal;
     margin-bottom: 1.5rem;
-    @include mobile{
+    @include desktop{
       @include heading-lg-lt;
     }
     @include tablet{
@@ -14,20 +14,23 @@
   &__subtitle{
     @include subheading-mob-lt;
     margin-bottom: 1.5rem;
-    @include mobile{
+    @include desktop{
       @include subheading-main-lt;
     }
   }
   &__blurb{
-   @include body-txt-lt ;
+  @include mob-body-txt-lt ;
    margin-bottom: 1.5rem;
+   @include desktop{
+     @include body-txt-lt ;
+   }
   }
 }
 
-.page-id-111, .single-post{
-  .marquis__title{
-    @include tablet{
-      white-space: normal;
-    }
-  }
-}
+// .page-id-111, .single-post{
+//   .marquis__title{
+//     @include tablet{
+//       white-space: normal;
+//     }
+//   }
+// }
