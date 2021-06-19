@@ -82,6 +82,9 @@
           grid-template-columns: repeat(4, 1fr);
           grid-template-rows: repeat(1, 1fr);
         }
+        @include xl{
+          width: $container-xl;
+        }
       }
     }
     &__list{
@@ -90,6 +93,9 @@
       margin-left: auto;
       transform: translateY(-50%);
       z-index: 5;
+      @include xl{
+        width: $container-xl;
+      }
       &--more{
         transform: unset;
       }
@@ -138,6 +144,9 @@
      justify-content: space-between;
      grid-template-columns:  40% 40%;
      z-index: 3;
+     @include xl{
+       width: $container-xl;
+     }
      &-1{
        .blog-preview__content.blog-preview__content:before{
          background-color: $color-swatch-caesar-2;
@@ -157,6 +166,11 @@
     margin-top: $section-spacer-default;
     margin-bottom: $section-spacer-default;
     margin-right: 2rem;
+    @include xl{
+      width: $container-lg;
+      margin-right: auto;
+      margin-left: auto;
+      }
     }
     &__ranking{
 

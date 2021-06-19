@@ -16,6 +16,10 @@
     @include tablet{
       height: 700px;
     }
+    @include xl{
+      width: $container-xl;
+      height: 1200px;
+    }
     &:nth-child(2){
 
     }
@@ -31,6 +35,9 @@
         height: 900px;
         @include tablet{
           height: 700px;
+        }
+        @include xl{
+          height: 1200px;
         }
       }
       .textblock{
@@ -71,9 +78,15 @@
 .svg__col{
   .two-col{
     &__wrapper{
-    max-height: 720px;
-    @include tablet{
-      height: 496px;
+    height: 560px;
+    @include mobile{
+      height: 720px;
+      }
+    @include desktop{
+      height: unset;
+      }
+      @include xl{
+        height: 560px;
       }
     }
     // &__lottie{

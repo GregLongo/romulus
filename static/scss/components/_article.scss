@@ -11,6 +11,9 @@
       @include tablet{
         grid-template-columns: 15% 60% 25%;
       }
+      @include xl{
+        width: $container-xl;
+      }
   }
   &__body{
     background: white;
