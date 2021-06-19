@@ -14,6 +14,9 @@
 		width: $container-lg;
 		height: 100%;
 		margin: auto;
+		@include xl{
+			width: $container-xl;
+		}
 	}
 	&__logo{
 		filter: brightness(0) invert(1);

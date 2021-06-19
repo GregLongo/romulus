@@ -22,6 +22,9 @@
       gap: unset;
       align-items: unset;
     }
+    @include xl{
+      width: $container-xl;
+    }
   }
   &__left{
     display: flex;

@@ -1,5 +1,34 @@
 .lottie{
   &--lg{
-    transform: scale(1.5);
+    transition: all .2s ease;
+    transform-origin: center;
+    transform: scale(1.2) translateY(-5%);
+    @include tablet{
+      transform: scale(1.3) translateY(0);
+    }
+  }
+  &--md{
+    transform:scale(.7)
+  }
+}
+
+#lottie{
+  &-helpdesk{
+    transform: scale(1.1);
+  }
+  &-onboarding{
+    transform: scale(1.6) translateY(25%);
+    @include tablet{
+      transform: scale(1.3) translateY(25%);
+    }
+  }
+  &-security{
+    transform: scale(.7);
+  }
+  &-compliance{
+    transform: scale(.7);
+    // @include tablet{
+    //   transform: scale(1.3) translateY(25%);
+    // }
   }
 }

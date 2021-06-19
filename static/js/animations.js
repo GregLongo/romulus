@@ -1,29 +1,29 @@
 import lottie from 'lottie-web'
-var home = require('../lottie/lottie1.json')
-var onboard = require('../lottie/lottie2.json')
-var stats = require('../lottie/stats.json')
+var main1 = require('../lottie/main1.json')
+var main2 = require('../lottie/main2.json')
+var main3 = require('../lottie/main3.json')
 var symbol1 = require('../lottie/contract-free.json')
 var symbol2 = require('../lottie/vendor-neutral.json')
 var symbol3 = require('../lottie/privacy-security.json')
 var symbol4 = require('../lottie/fast-responsiveness.json')
-var scienceguy = require('../lottie/scienceguy.json')
-var statsgirl = require('../lottie/statsgirl.json')
-var macguy = require('../lottie/macguy.json')
-var handshake = require('../lottie/handshake.json')
-var messages = require('../lottie/messages.json')
+var helpdesk = require('../lottie/helpdesk.json')
+var onboarding = require('../lottie/onboarding.json')
+var security = require('../lottie/security.json')
+var compliance = require('../lottie/compliance.json')
+var messages = require('../lottie/slack.json')
 
 var animations = [
-    [home,'home'],
-    [onboard,'onboard'],
-    [stats,'stats'],
+    [main1,'main1'],
+    [main2,'main2'],
+    [main3,'main3'],
     [symbol1,'symbol1'],
     [symbol2,'symbol2'],
     [symbol3,'symbol3'],
     [symbol4,'symbol4'],
-    [scienceguy,'scienceguy'],
-    [statsgirl,'statsgirl'],
-    [macguy,'macguy'],
-    [handshake,'handshake'],
+    [helpdesk,'helpdesk'],
+    [onboarding,'onboarding'],
+    [security,'security'],
+    [compliance,'compliance'],
     [messages,'messages']
   ];
 
@@ -37,5 +37,7 @@ animations.forEach(function(anim){
       animationData: anim[0]
     })
   });
+
+  $("svg").attr('aria-label','vector animation')
 
 });

@@ -4,17 +4,24 @@
     overflow-y: hidden;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-column-gap: 2em;
     align-items: center;
     width: $container-lg;
     margin-left: auto;
     margin-right: auto;
     height: 900px;
-    @include mobile{
+    @include tablet{
       grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 2em;
     }
     @include tablet{
       height: 700px;
+    }
+    @include xl{
+      width: $container-xl;
+      height: 1200px;
+    }
+    &:nth-child(2){
+
     }
     &:nth-child(3){
       color: $text-color-light;
@@ -29,6 +36,9 @@
         @include tablet{
           height: 700px;
         }
+        @include xl{
+          height: 1200px;
+        }
       }
       .textblock{
         &__heading{
@@ -36,14 +46,17 @@
           margin-bottom: 1.5rem;
         }
         &__text{
-          @include body-txt-lt;
-        }
+          @include mob-body-txt-lt ;
+           @include mobile{
+             @include body-txt-lt ;
+           }
+         }
       }
     }
   }
   &__textblock{
     grid-row:1;
-    @include mobile{
+    @include tablet{
       grid-row:unset;
     }
     .textblock{
@@ -52,7 +65,41 @@
         margin-bottom: 1.5rem;
       }
       &__text{
-        @include body-txt;
+        @include mob-body-txt;
+         @include mobile{
+           @include body-txt;
+         }
+       }
+    }
+  }
+}
+
+
+.svg__col{
+  .two-col{
+    &__wrapper{
+    height: 560px;
+    @include mobile{
+      height: 720px;
+      }
+    @include desktop{
+      height: unset;
+      }
+      @include xl{
+        height: 560px;
+      }
+    }
+    // &__lottie{
+    //   max-height: 280px;
+    //   @include tablet{
+    //     max-height: unset;
+    //   }
+    // }
+  }
+  &:first-of-type{
+    .two-col{
+      &__wrapper{
+        margin-top: 3rem;
       }
     }
   }

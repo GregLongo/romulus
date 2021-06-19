@@ -9,20 +9,20 @@
   font-family: $font-heading;
   font-weight: 400;
   color: white;
-  font-size: 3.5em;
+  font-size: 3em;
 }
 
 @mixin heading-md-lt{
   font-family: $font-heading;
   font-weight: 400;
   color: white;
-  font-size: 2.5em;
+  font-size: 2.3em;
 }
 
 @mixin heading-md{
   font-family: $font-heading;
   font-weight: 400;
-  font-size: 2.5em;
+  font-size: 2.3em;
 }
 
 @mixin heading-sm-lt{
@@ -108,17 +108,24 @@
   line-height: 1.5em;
 }
 
-@mixin mob-body-txt{
+@mixin mob-body-txt-blog{
   font-family: $font-text;
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-weight: 300;
   line-height: 1.4em;
-  color: white;
+}
+
+
+@mixin mob-body-txt{
+  font-family: $font-text;
+  font-size: 1.3em;
+  font-weight: 300;
+  line-height: 1.4em;
 }
 
 @mixin mob-body-txt-lt{
   font-family: $font-text;
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-weight: 300;
   line-height: 1.4em;
   color: white;
@@ -147,8 +154,8 @@
 @mixin quote-txt{
   font-style: italic;
   font-family: $font-text;
-  font-weight: 300;
-  line-height: 1.7em;
+  font-weight: 500;
+  line-height: 1.8em;
   color: white;
 }
 

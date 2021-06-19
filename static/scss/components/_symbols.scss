@@ -18,6 +18,9 @@
       grid-template-columns: repeat(4, 1fr);
       padding: unset;
     }
+    @include xl{
+      width: $container-xl;
+    }
   }
   &__block{
     text-align: center;
@@ -37,7 +40,9 @@
   }
   &__lottie{
     height: 200px;
-    margin-bottom: 4rem;
+    @include mobile{
+      margin-bottom: 4rem;
+    }
     &#lottie-symbol1{
       transform:  translateY(-1.6rem) translateX(1.5rem);
     }

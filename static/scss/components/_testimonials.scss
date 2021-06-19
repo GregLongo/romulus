@@ -29,11 +29,15 @@
       grid-template-rows: repeat(2, 1fr);
       grid-template-columns: repeat(2, 1fr);
     }
+    @include xl{
+      width: $container-xl;
+    }
   }
   &__quote{
     background-repeat: repeat-x;
     background-size: contain;
     animation: loop 10s linear infinite;
+    min-height: 400px;
   }
   &__scrim{
   flex-direction: column;
@@ -42,7 +46,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: .8;
+  // opacity: .8;
   }
   &__content{
     @include quote-txt;
@@ -52,7 +56,7 @@
     padding-bottom:1em;
     font-size: 1.2em;
     @include tablet{
-      font-size: 1.5em;
+      font-size: 1.7em;
     }
   }
   &__person{

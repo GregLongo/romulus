@@ -11,12 +11,16 @@
       @include tablet{
         grid-template-columns: 15% 60% 25%;
       }
+      @include xl{
+        width: $container-xl;
+      }
   }
   &__body{
     background: white;
-    @include body-txt-blog;
+    @include mob-body-txt-blog;
     padding: 2rem 0rem 5rem 0rem;
     @include tablet{
+      @include body-txt-blog;
       margin-top: -6rem;
       padding: 2rem 4rem 5rem 4rem;
       border-top: 5px solid $color-swatch-caesar-2;
