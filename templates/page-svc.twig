@@ -2,31 +2,23 @@
 
 {% block content %}
   {% include "partials/hero-svc.twig" %}
-  <span class="svg__col" id="svc1">
   {% include "partials/twocol.twig" with {
     lottie:'helpdesk',
     textblock: post.meta("textblock1"),
     direction: 'rtl'
   }  %}
-  </span>
-  <span class="svg__col" id="svc2">
   {% include "partials/twocol.twig" with {
     lottie:'onboarding',
     textblock: post.meta("textblock2")
   }  %}
-  </span>
-  <span class="svg__col" id="svc3">
   {% include "partials/twocol.twig" with {
     lottie:'security',
     textblock: post.meta("textblock3"),
     direction: 'rtl'
   }  %}
-  </span>
-  <span class="svg__col" id="svc4">
   {% include "partials/twocol.twig" with {
     lottie:'compliance',
     textblock: post.meta("textblock4")
   }  %}
-  </span>
   {% include "partials/cta-particles.twig" with {calendly:true}%}
 {% endblock %}
