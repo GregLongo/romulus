@@ -6,11 +6,12 @@ var symbol1 = require('../lottie/contract-free.json')
 var symbol2 = require('../lottie/vendor-neutral.json')
 var symbol3 = require('../lottie/privacy-security.json')
 var symbol4 = require('../lottie/fast-responsiveness.json')
-var helpdesk = require('../lottie/helpdesk.json')
+var helpdesk = require('../lottie/helpdesk_half2.json')
 var onboarding = require('../lottie/onboarding.json')
 var security = require('../lottie/security.json')
 var compliance = require('../lottie/compliance.json')
 var messages = require('../lottie/slack.json')
+var team = require('../lottie/helpdesk_half.json')
 
 var animations = [
     [main1,'main1'],
@@ -24,7 +25,8 @@ var animations = [
     [onboarding,'onboarding'],
     [security,'security'],
     [compliance,'compliance'],
-    [messages,'messages']
+    [messages,'messages'],
+    [team,'team']
   ];
 
 jQuery(document).ready(function() {

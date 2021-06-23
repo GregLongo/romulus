@@ -11,6 +11,11 @@
     lottie:'main3',
     textblock: post.meta("textblock2")
   }  %}
+  {% include "partials/twocol.twig" with {
+    lottie:'messages',
+    textblock: post.meta("textblock3"),
+    direction: 'rtl'
+  }  %}
   {% include "partials/symbols.twig" %}
   <div class="blog-preview--home">
     {% include 'partials/section-header.twig' with {
