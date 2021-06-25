@@ -49,7 +49,19 @@
     		min-width: 40%;
 			}
 			li:last-child a{
-				padding-right:0;
+				margin-right:0;
+				background-color: $color-swatch-caesar-2;
+				padding-left: 1.5rem;
+				padding-right: 1.5rem;
+				padding-top: .5rem;
+				padding-bottom: .5rem;
+				color: white;
+				border-radius: 1em;
+				border: 2px solid $color-swatch-caesar-2;
+				&:hover{
+					background-color: white;
+					color: $color-swatch-caesar-2;
+				}
 			}
 		}
 	}

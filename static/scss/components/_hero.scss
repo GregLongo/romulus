@@ -3,7 +3,10 @@
   // height: $hero-height-mobile;
   @include tablet{
     height: $hero-height;
-    margin-bottom: $section-spacer-default * .5;
+    margin-bottom: -$section-spacer-default;
+  }
+  @include desktop{
+    margin-bottom: 0;
   }
   &__container{
     // overflow-x: hidden;
@@ -23,7 +26,7 @@
     @include tablet{
       grid-template-columns: repeat(2, 1fr);
       grid-row-gap: $section-spacer-default;
-      padding-top: $header-height;
+      padding-top: $header-height * .9;
     }
     @include xl{
       width: $container-xl;
@@ -39,7 +42,7 @@
   &--gradient{
     background-image: linear-gradient(175deg, rgba(0,0,0,0) 70%, #ffffff calc(70% + 2px)) ;
     @include desktop{
-      background-image: linear-gradient(175deg, rgba(0,0,0,0) 80%, #ffffff calc(80% + 2px)) ;
+      background-image: linear-gradient(175deg, rgba(0,0,0,0) 70%, #ffffff calc(70% + 2px)) ;
     }
     @include xl{
       background-image: linear-gradient(175deg, rgba(0,0,0,0) 70%, #ffffff calc(70% + 2px)) ;
@@ -56,7 +59,7 @@
       //   height: $hero-height * 1.7;
       // }
       @include mobile{
-        height: 900px;
+        height: $hero-height;
       }
       @include tablet{
         height: $hero-height;
@@ -72,36 +75,41 @@
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 2rem;
     height: 320px;
+    font-weight: 700;
     margin-top: 0;
+    font-size: 2em;
+    font-family: $font-heading;
+
     @include tablet{
       margin-left: auto;
-      margin-top: 20vh;
+      margin-top: 14vh;
       width: 95%;
     }
     @include xl{
       width: 75%;
-      margin-top: 10vh;
+      margin-top: 12vh;
     }
   }
   &__select{
-    background: $color-swatch-caesar-4;
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border-radius: 24px;
     text-align: center;
-    box-shadow: 5px -5px 0px 0px #289FED, 10px -10px 0px 0px #5FB8FF, 15px -15px 0px 0px #A1D8Ff;
+    color: #6fbbff;
+    // filter: drop-shadow( 2px 2px 0 $color-swatch-caesar-3);
     &:hover{
-      box-shadow: 4px -4px 0px 0px #289FED, 9px -9px 0px 0px #5FB8FF, 14px -14px 0px 0px #A1D8Ff;
-      transform: translate(2px, -2px);
-      color: $color-swatch-caesar-2;
+      color:  $color-swatch-caesar-2;
     }
     &-icon{
-      font-size: 2em;
-      margin-bottom: .5rem;
+      font-size: 3em;
+      margin-bottom: 2rem;
+      // filter: drop-shadow( 10px 8px 0 $color-swatch-caesar-3);
+      @include desktop{
+        font-size: 4em;
+      }
     }
   }
   &--post{
@@ -116,11 +124,9 @@
     z-index: 0;
   }
   &--svc{
-    @include mobile{
-      height: 900px;
-    }
+      margin-bottom: 6rem;
     @include tablet{
-      height: $hero-height;
+      margin-bottom: -3rem;
     }
   }
 }

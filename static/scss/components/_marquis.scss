@@ -14,6 +14,10 @@
   &__subtitle{
     @include subheading-mob-lt;
     margin-bottom: 1.5rem;
+    white-space: normal;
+    @include tablet{
+      white-space: nowrap;
+    }
     @include desktop{
       @include subheading-main-lt;
     }
