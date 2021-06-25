@@ -1,25 +1,18 @@
 <div class="team">
+<div class="team__scrim"> </div>
   <div class="team__members">
   <div class="team__header">
     <div class="team__header-title">
       Meet The Team
     </div>
-    <div>
-      {% for page in post.meta('team')|batch(6, "null") %}
-        <button id="tab-{{loop.index}}" class=" tab team-tab" ></button>
-      {% endfor %}
-    </div>
   </div>
     <div class="team__wrapper">
-    {% for page in post.meta('team')|batch(6, "null") %}
-    <div id="tab-{{loop.index }}_content" class="team__page">
-    {% for teammate in page %}
+
+    {% for teammate in post.meta('team') %}
       {% if teammate != 'null' %}
       <div class="team__teammate">
       <div style="position:relative">
           <div class="team__teammate-img" style="background-image: url({{Image(teammate.image).src}})" ></div>
-          <div class="team__teammate-scrim" style="border-bottom:100px solid {{teammate.scrimcolor}}" ></div>
-          <span class="team__teammate-icon fas fa-{{teammate.icon}}"></span>
         </div>
         <div class="team__teammate-name">{{teammate.name}}</div>
         <div class="team__teammate-title">{{teammate.title}}</div>
@@ -27,36 +20,14 @@
     {%  endif %}
     {% endfor %}
     </div>
-    {% endfor %}
-    </div>
   </div>
   <div class="team__bio">
-  <div class="team__bio-placeholder" > Click on a profile to learn more </div>
   {% for teammate in post.meta('team') %}
     <div id="member-{{loop.index0 }}_content" class="team__teammate-bio">
       <div class="team__teammate-img--lg" style="background-image: url({{Image(teammate.image).src}})" ></div>
       <div class="team__teammate-name team__teammate-name--lg">{{teammate.name}}</div>
-      <div class="team__teammate-title team__teammate-title--lg">{{teammate.title}}
-      <span style="color:{{teammate.scrimcolor}}" class="fas fa-{{teammate.icon}}"></span>
-      </div>
       <div class="team__teammate-bio-text">
-
-        {% set words = teammate.bio|split(' ') %}
-
-        {% for wordblock in words|batch(65, "") %}
-          <button id="{{teammate.icon}}-tab-{{loop.index}}" class="tab bio-tab" ></button>
-        {% endfor %}
-        {% for wordblock in words|batch(65, "") %}
-          <div id="{{teammate.icon}}-tab-{{loop.index }}_content" class="bio__page">
-          <p>
-            {% for word in wordblock %}
-              {% if word != null %}
-                {{word}}
-              {% endif %}
-            {% endfor %}
-            <p>
-          </div>
-        {% endfor %}
+        {{teammate.bio}}
       </div>
     </div>
   {% endfor %}

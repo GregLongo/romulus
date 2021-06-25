@@ -8,17 +8,18 @@
     width: $container-lg;
     margin-left: auto;
     margin-right: auto;
-    height: 900px;
+    height: 800px;
     @include tablet{
+      height: 800px;
       grid-template-columns: repeat(2, 1fr);
       grid-column-gap: 2em;
     }
-    @include tablet{
+    @include desktop{
       height: 800px;
     }
     @include xl{
       width: $container-xl;
-      height: 1200px;
+      height: 800px;
     }
     &:nth-child(2){
 
@@ -32,12 +33,12 @@
         left:0;
         position: absolute;
         z-index: -1;
-        height: 900px;
+        height: 800px;
         @include tablet{
           height: 800px;
         }
         @include xl{
-          height: 1200px;
+          height: 800px;
         }
       }
       .textblock{
@@ -63,6 +64,10 @@
       &__heading{
         @include heading-md;
         margin-bottom: 1.5rem;
+        padding-top: 4rem;
+        @include tablet{
+          padding-top: unset;
+        }
       }
       &__text{
         @include mob-body-txt;
