@@ -1,12 +1,19 @@
 .hero{
   width: 100%;
-  // height: $hero-height-mobile;
+  height: $hero-height * 1.2;
+  margin-bottom: $section-spacer-default;
   @include tablet{
     height: $hero-height;
-    margin-bottom: -$section-spacer-default;
+    margin-bottom: -$section-spacer-default * 1.2;
   }
   @include desktop{
+    margin-bottom: -$section-spacer-default;
+  }
+  @include widescreen{
     margin-bottom: 0;
+  }
+  @include xl{
+    margin-bottom: $section-spacer-default;
   }
   &__container{
     // overflow-x: hidden;
@@ -126,7 +133,7 @@
   &--svc{
       margin-bottom: 6rem;
     @include tablet{
-      margin-bottom: -3rem;
+      margin-bottom: -4rem;
     }
   }
 }

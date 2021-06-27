@@ -4,12 +4,12 @@
   {% include "partials/hero-home.twig" %}
   {% include "partials/twocol.twig" with {
     lottie:'messages',
-    textblock: post.meta("textblock3"),
+    textblock: post.meta("textblock1"),
     direction: 'rtl'
   }  %}
   {% include "partials/twocol.twig" with {
     lottie:'main2',
-    textblock: post.meta("textblock1"),
+    textblock: post.meta("textblock2"),
     direction: 'rtl'
   }  %}
   {% include "partials/symbols.twig" %}
@@ -26,6 +26,6 @@
           <a href='/blog'>check it out</a>
       </button>
     </diV>
+    {% include "partials/testimonials.twig" %}
     {% include "partials/cta-particles.twig" with {certs:true} %}
-  {% include "partials/testimonials.twig" %}
 {% endblock %}
