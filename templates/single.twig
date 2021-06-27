@@ -15,6 +15,7 @@
 		    <div class=marquis__dateline>
 					<time datetime="{{ post.date|date('Y-m-d H:i:s') }}">{{ post.date }}</time>
 					<span>{{post.category}}</span>
+          <span>By {{post.author.name}}</span>
 		    </div>
 		    {% if cta == 'visible' %}
 				  <div class="button button--cta">

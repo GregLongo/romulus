@@ -7,14 +7,16 @@
   margin-bottom: 120px;
   z-index: 2;
   position: relative;
+  margin-top: -160px;
   @include mobile{
-    padding-top: 20rem; //stupid grid gap thing. maybe fix
+    margin-top: 0px;
   }
-  @include tablet{
-    padding-top: unset;
-  }
-  @include xl{
+  @include desktop{
     width: $container-xl;
+    margin-top: -120px;
+  }
+  @include widescreen{
+    margin-top: 0;
   }
   &__header{
     justify-content: space-between;
@@ -100,10 +102,10 @@
       background: linear-gradient(201deg,#020024,#08f);
       color: white;
       height: 100vh;
-      width: 880px;
+      width: 50vw;
       padding: 8rem 3rem 6rem 3rem;
       z-index: 1000;
-
+      overflow-y: scroll;
       &.selected-panel{
         transform: translateX(0);
       }
