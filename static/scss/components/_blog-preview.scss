@@ -208,8 +208,12 @@
       display:none;
     }
     .blog-preview__container--generic{
-      margin-top: $section-spacer-default;
-      margin-bottom: $section-spacer-default;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      @include tablet{
+        margin-top: $section-spacer-default;
+        margin-bottom: $section-spacer-default;
+      }
     }
   }
 }

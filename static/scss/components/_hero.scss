@@ -1,13 +1,17 @@
 .hero{
   width: 100%;
-  height: $hero-height * 1.2;
-  margin-bottom: $section-spacer-default;
+  height: $hero-height-mobile;
+  margin-bottom: $section-spacer-default * .7;
+  @include mobile{
+    height: $hero-height;
+    margin-bottom: $section-spacer-default * 2;
+  }
   @include tablet{
     height: $hero-height;
-    margin-bottom: -$section-spacer-default * 1.2;
+    margin-bottom: -$section-spacer-default * 2;
   }
   @include desktop{
-    margin-bottom: -$section-spacer-default;
+    margin-bottom: -$section-spacer-default * 1.2;
   }
   @include widescreen{
     margin-bottom: 0;
@@ -59,7 +63,7 @@
       content: '';
       position: absolute;
       top: 0;
-      height: $hero-height * 1.15;
+      height: $hero-height-mobile;
       width: 100%;
       background: linear-gradient(201deg, rgba(2,0,36,1) 0%, rgba(0,136,255,1) 100%);
       // @include mobile{
@@ -81,20 +85,23 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 2rem;
-    height: 320px;
+    width: 100%;
+    height: 480px;
     font-weight: 700;
     margin-top: 0;
-    font-size: 2em;
+    font-size: 1.5em;
     font-family: $font-heading;
-
+    @include mobile{
+      margin-top: -10rem;
+    }
     @include tablet{
       margin-left: auto;
-      margin-top: 14vh;
+      margin-top: 8rem;
       width: 95%;
     }
     @include xl{
       width: 75%;
-      margin-top: 12vh;
+      margin-top: 6vh;
     }
   }
   &__select{
@@ -111,7 +118,7 @@
       color:  $color-swatch-caesar-2;
     }
     &-icon{
-      font-size: 3em;
+      font-size: 2.5em;
       margin-bottom: 2rem;
       // filter: drop-shadow( 10px 8px 0 $color-swatch-caesar-3);
       @include desktop{
@@ -122,18 +129,34 @@
   &--post{
     background-repeat: no-repeat;
     background-size: cover;
+    margin-bottom: 0;
+    @include tablet{
+      margin-bottom: inherit;
+    }
   }
   &__scrim{
     background: linear-gradient(180deg, rgba(2,0,36,.6) 0%, rgba(0,0,0,0.2) 50%);
-    height: $hero-height;
     width: 100%;
     position: absolute;
     z-index: 0;
+    height: $hero-height/1.5;
+    @include tablet{
+      height: $hero-height;
+    }
   }
   &--svc{
-      margin-bottom: 6rem;
+      margin-bottom: 10rem;
+      @include mobile{
+        // height: $hero-height-mobile/1.3;
+        margin-bottom: 0rem;
+      }
     @include tablet{
-      margin-bottom: -4rem;
+      margin-bottom: -10rem;
+      // height: $hero-height-mobile;
+
+    }
+    .hero__container{
+      // height: $hero-height-mobile/1.5;
     }
   }
 }

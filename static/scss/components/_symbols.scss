@@ -6,7 +6,7 @@
   }
   &__container{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 2rem;
     align-items: center;
     height: 100%;
@@ -14,6 +14,9 @@
     padding-top: $section-spacer-default;
     padding-bottom: $section-spacer-default;
     margin: auto;
+    @include mobile{
+      grid-template-columns: repeat(2, 1fr);
+    }
     @include tablet{
       grid-template-columns: repeat(4, 1fr);
       padding: unset;
