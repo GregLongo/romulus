@@ -9,7 +9,7 @@
   font-family: $font-heading;
   font-weight: 400;
   color: white;
-  font-size: 3em;
+  font-size: 2.5em;
 }
 
 @mixin heading-md-lt{
@@ -65,7 +65,7 @@
 
 @mixin subheading-mob-lt{
   font-family: $font-subheading;
-  font-size: 1.5em;
+  font-size: 1.4em;
   color: white;
 }
 

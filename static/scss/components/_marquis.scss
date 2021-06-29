@@ -31,10 +31,11 @@
   }
 }
 
-// .page-id-111, .single-post{
-//   .marquis__title{
-//     @include tablet{
-//       white-space: normal;
-//     }
-//   }
-// }
+
+.single-post{
+  .marquis__title{
+    @include tablet{
+      white-space: normal;
+    }
+  }
+}
