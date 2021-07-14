@@ -111,13 +111,13 @@ wp_enqueue_script('calendly' , 'async');
 
 //analytics (dummy tracker)
 function add_analytics(){ ?>
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-QB1ZZMYMP1"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XTGGH3WXN"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 
-		gtag('config', 'G-QB1ZZMYMP1');
+		gtag('config', 'G-4XTGGH3WXN');
 	</script>
 	<?php }
 add_action('wp_head', 'add_analytics');
