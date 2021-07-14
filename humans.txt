@@ -1,0 +1,8 @@
+## Team
+
+TappingBones
+http://tappingbones.com
+
+## Site
+
+Software: Timber, Sass, Bem, Js, Mix, Particles, Lottie, Typekit, Hamburgers

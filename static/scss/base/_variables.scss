@@ -1,0 +1,110 @@
+
+//==============================================================================
+// Breakpoints
+//==============================================================================
+
+$small: 576px !default;
+$mobile: 768px !default;
+$tablet: 992px !default;
+$desktop: 1200px !default;
+$desktop-wide: 1600px !default;
+$desktop-xl: 2000px !default;
+
+
+//==============================================================================
+// Colors
+
+$color-swatch-caesar-1 : #008983;//Teal (this color doesnt belong here, need to reorder the swatches)
+$color-swatch-caesar-2 : #007ff1;//Azure Radiance
+$color-swatch-caesar-3 : #000b33;//Stratos
+$color-swatch-caesar-4 : #033F63;//Astronaut Blue
+
+$charcoal: #333333;
+
+//Applied Colors
+$background-global: "";
+$text-color-primary:  $charcoal;
+$text-color-light: white;
+
+//==============================================================================
+// fonts
+//==============================================================================
+
+$font-text: 'atten-new', sans-serif;
+$font-heading: 'aktiv-grotesk-extended', sans-serif;
+$font-subheading: 'Numans', sans-serif;
+
+//==============================================================================
+// Spacing
+//==============================================================================
+
+$container-lg: 90%;
+$container-xl: 75%;
+$section-spacer-default: 120px;
+//==============================================================================
+// Components
+//==============================================================================
+
+//atoms
+
+$button-color: $color-swatch-caesar-1;
+$button-color-hover: $color-swatch-caesar-4;
+$button-font: $font-text;
+$button-padding: 8px 12px 8px 12px;
+$button-border: none;
+
+//Header____________
+$header-affix-transition: .2s;
+$header-height: 160px;
+$header-height-mobile: 100px;
+$header-z: 10;
+$header-logo-height: 64px;
+$header-logo-height-small: 42px;
+$header-logo-height-mobile: 56px;
+$header-logo-height-tablet: 64px;
+$header-bg-fixed: white;
+$header-fixed-shadow: 0px 0px 4px 4px rgba(41,41,41,.05);
+$header-height-fixed: $header-height * .5;
+$header-logo-fixed-scale-factor: .8;
+
+//Footer____________
+
+$footer-height: 96px;
+$footer-text-align: center;
+$footer-content-justify: center;
+$footer-affix: relative;
+$footer-height-real: 300px;
+$footer-title-size: 3em;
+$footer-title-size-mobile: 2em;
+$footer-social-icon-size: 48px;
+$footer-social-icon-size-mobile: 32px;
+$footer-logo-height: 88px;
+
+//Hero_____________
+$hero-height: 800px;
+$hero-height-mobile: 960px;
+
+//Nav_____________
+$nav-link-color: white;
+$nav-link-size: 1.2em;
+$nav-link-size-sm: 1em;
+$nav-link-margin: 2rem;
+$nav-link-weight: 500;
+$nav-link-font: $font-text;
+$nav-link-size-mobile: 1.5em;
+$nav-bg-mobile: $color-swatch-caesar-2;
+$nav-link-color-mobile: $nav-link-color;
+$nav-menu-link-color-hover: $color-swatch-caesar-2;
+$nav-menu-link-color-fix: $color-swatch-caesar-3;
+$hamburger-color:white;
+$hamburger-color-dk:$color-swatch-caesar-3;
+
+
+//==============================================================================
+// Pages
+//==============================================================================
+
+//404______________
+$fourohfour-font: $font-text;
+$fourohfour-font-size: 4em;
+$fourohfour-font-color: white;

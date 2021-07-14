@@ -1,0 +1,52 @@
+.header{
+	position: fixed;
+	z-index: $header-z;
+	transition: all $header-affix-transition linear;
+	width: 100vw;
+	height: $header-height-mobile;
+	@include tablet{
+		height: $header-height;
+	}
+	&__wrapper{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: $container-lg;
+		height: 100%;
+		margin: auto;
+		@include xl{
+			width: $container-xl;
+		}
+	}
+	&__logo{
+		filter: brightness(0) invert(1);
+		display: block;
+		transition: all $header-affix-transition linear;
+		height: $header-logo-height-small;
+		@include small{
+			height: $header-logo-height-mobile;
+		}
+		@include mobile{
+			display: flex;
+			position: relative;
+			top: auto;
+			left: auto;
+			height: $header-logo-height-tablet;
+		}
+		@include tablet{
+			height: $header-logo-height;
+		}
+	}
+	&--fixed{
+			height: $header-height-fixed;
+			box-shadow: $header-fixed-shadow;
+			background-color: $header-bg-fixed;
+			.nav--main a{
+				color: $nav-menu-link-color-fix;
+			}
+			.header__logo{
+				filter: unset;
+				transform: scale($header-logo-fixed-scale-factor);
+			}
+	}
+}

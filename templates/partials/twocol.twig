@@ -1,0 +1,27 @@
+<div class="two-col__wrapper" id="{{ id }}">
+	{% if direction == 'rtl' %}
+		<div class="two-col__lottie">
+      <div id="lottie-{{ lottie }}" class="lottie lottie--lg" aria-label="animation" role="presentation"></div>
+		</div>
+		<div class="two-col__textblock">
+		  <div class="textblock__heading">
+		     {{ textblock.heading }}
+		  </div>
+		  <div class="textblock__text">
+		    {{ textblock.text }}
+		  </div>
+		</div>
+	{% else %}
+		<div class="two-col__textblock">
+		  <div class="textblock__heading">
+				{{ textblock.heading }}
+		  </div>
+		  <div class="textblock__text">
+				{{ textblock.text }}
+		  </div>
+		</div>
+    <div class="two-col__lottie">
+      <div id="lottie-{{ lottie }}" class="lottie lottie--lg" aria-label="animation" role="presentation"></div>
+		</div>
+	{% endif %}
+</div>

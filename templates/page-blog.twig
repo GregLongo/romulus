@@ -1,0 +1,92 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<div class="hero hero--post"  style="background-image:url({{post.thumbnail.src}})" >
+<div class="hero__scrim"></div>
+  <div class= "hero__container hero__container--post">
+		{% include "partials/marquis.twig" %}
+    </div>
+</div>
+
+<div class="blog__desktop-content">
+	<div class="blog-preview__list">
+	{% for page in recentposts|batch(4, "null") %}
+		<button id="list-tab-{{loop.index}}" class="tab list-tab" ></button>
+	{% endfor %}
+	{% for page in recentposts|batch(4, "null") %}
+	<div id="list-tab-{{loop.index }}_content" class="blog-preview__page blog-preview__page--list">
+	{% for post in page %}
+  <a href="{{post.link}}" class="blog-preview" style="background-image:url({{post.thumbnail.src}})" >
+			<div class="blog-preview__content">
+				<div class="blog-preview__title">{{post.title}}</div>
+        <div class="blog-preview__excerpt">{{post.preview.length(20).read_more(false)}}</div>
+			</div>
+		</a>
+	{% endfor %}
+	</div>
+	{% endfor %}
+	</div>
+
+	{% include "partials/cta-particles.twig" with {isBlog:true}%}
+
+	<div class="blog-preview__most-recent">
+	{% for post in allposts|slice(0,2) %}
+		<div class=" blog-preview__most-recent-{{loop.index}}">
+			<a href="{{post.link}}" class="blog-preview blog-preview--recent" style="background-image:url({{post.thumbnail.src}})" >
+				<div class="blog-preview__content blog-preview__content--recent">
+					<div class="blog-preview__title blog-preview__title--recent">{{post.title}}</div>
+					<div class="blog-preview__excerpt blog-preview__excerpt--recent">{{post.preview.length(20).read_more(false)}}</div>
+				</div>
+			</a>
+		</div>
+	{% endfor %}
+	</div>
+	<div class="blog-preview__misc">
+		<div class="blog-preview__list blog-preview__list--more">
+		{% for page in allposts|batch(4, "null") %}
+			<button id="more-tab-{{loop.index}}" class="tab more-tab" ></button>
+		{% endfor %}
+		{% for page in allposts|slice(2)|batch(4, "null") %}
+		<div id="more-tab-{{loop.index }}_content" class="blog-preview__page blog-preview__page--more">
+		{% for post in page %}
+			<a href="{{post.link}}" class="blog-preview" style="background-image:url({{post.thumbnail.src}})" >
+				<div class="blog-preview__content blog-preview__content--nobg">
+					<div class="blog-preview__title">{{post.title}}</div>
+					<div class="blog-preview__excerpt">{{post.preview.length(20).read_more(false)}}</div>
+				</div>
+			</a>
+		{% endfor %}
+		</div>
+		{% endfor %}
+		</div>
+		<div class="blog-preview__ranking">
+      {% include "partials/ranking.twig" %}
+		</div>
+</div>
+</div>
+<div class="blog__mobile-content">
+  <div class="blog-preview__container--generic">
+    {% for post in allposts|slice(0, 4) %}
+      <a href="{{post.link}}" class="blog-preview" style="background-image:url({{post.thumbnail.src}})" >
+        <div class="blog-preview__content">
+          <div class="blog-preview__title">{{post.title}}</div>
+          <div class="blog-preview__excerpt">{{post.preview.length(20).read_more(false)}}</div>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+
+  <div class="blog-preview__container--generic">
+    {% for post in allposts|slice(4) %}
+      <a href="{{post.link}}" class="blog-preview" style="background-image:url({{post.thumbnail.src}})" >
+        <div class="blog-preview__content">
+          <div class="blog-preview__title">{{post.title}}</div>
+          <div class="blog-preview__excerpt">{{post.preview.read_more(false)}}</div>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

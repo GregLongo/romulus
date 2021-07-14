@@ -1,0 +1,37 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<div class="hero hero--post"  style="background-image:url({{post.thumbnail.src}})" >
+<div class="hero__scrim"></div>
+  <div class= "hero__container hero__container--post">
+		<div class="marquis marquis--post" >
+				<div class=marquis__title>
+				{{ post.title }}
+				</div>
+		    <div class=marquis__subtitle>
+				{{ post.preview.read_more(false) }}
+		    </div>
+		    <div class=marquis__dateline>
+					<time datetime="{{ post.date|date('Y-m-d H:i:s') }}">{{ post.date }}</time>
+					<span>{{post.category}}</span>
+          <span>By {{post.author.name}}</span>
+		    </div>
+		    {% if cta == 'visible' %}
+				  <div class="button button--cta">
+					   <a href={{post.meta('cta-link')}}>{{post.meta('cta-text')}}</a>
+				   </div>
+		    {% endif %}
+			</div>
+    </div>
+</div>
+<div class="article__wrapper">
+	<div class="post__social"></div>
+	<div class="article__body">
+		{{post.content}}
+	</div>
+  {% include "partials/ranking.twig" %}
+</div>
+
+
+{% endblock %}

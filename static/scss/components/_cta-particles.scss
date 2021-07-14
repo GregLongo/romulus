@@ -1,0 +1,62 @@
+.cta-particles{
+  width: 100%;
+  background: linear-gradient(201deg, rgba(2,0,36,1) 0%, rgba(0,136,255,1) 100%);
+  &__cta{
+    color: white;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 280px;
+    text-align: center;
+    z-index: 4;
+    flex-direction: column;
+  }
+  &__text{
+    @include cta-mob-lt;
+    @include mobile{
+      @include cta-lt;
+    }
+  }
+  .button--cta{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 90%;
+    @include tablet{
+      width: initial;
+    }
+  }
+}
+
+.particles{
+  height: 280px;
+  width: 100%;
+  opacity: .5;
+}
+
+
+.certificate{
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left:auto;
+  margin-right:auto;
+  // margin-top: 2rem;
+
+    // grid-template-columns: repeat(2, 1fr);
+    width: 60%;
+  // }
+  &__logo{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    // margin-top: 3rem;
+    height: 80px;
+    @include mobile{
+      height: 120px;
+    }
+  }
+}

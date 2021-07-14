@@ -1,0 +1,25 @@
+<div class="footer">
+<div class="footer__container">
+  <div class="footer__left">
+  <div class="footer__copyright">
+    © {{"now"|date('Y')}} Sentant Networks LLC
+    </div>
+    <div class="footer__social">
+    {% for item in options.social_media %}
+      <div class="footer__social-logo">
+      <a href="{{item.social_link}}" aria-label="{{ item.social_channel }}"  target="_blank">
+        <span class="fab fa-{{ item.social_channel }}" aria-hidden="true"></span>
+      </a>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+  <a href="http://tappingbones.com" target="_blank" rel="noopener">
+    <div class="tappingbones">
+      <span class="tappingbones__name">
+        Site By tappingbones
+      </span>
+      <img class="tappingbones__logo" src="{{theme.path}}/dist/svg/tbblob.svg" alt="TappingBones Logo" />
+    </div>
+    </a>
+</div>

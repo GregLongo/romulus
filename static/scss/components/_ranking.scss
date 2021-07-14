@@ -1,0 +1,67 @@
+.ranking{
+  &__heading{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    @include heading-section;
+  }
+  &__card{
+    margin: auto;
+    height: 96px;
+    width: 100%;
+    max-width: 480px;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    border: 1px solid black ;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    @include tablet{
+      max-width: 560px;
+    }
+    &:hover{
+      border: 1px solid $color-swatch-caesar-2 ;
+    }
+  }
+  &__img{
+    overflow: hidden;
+    height: 100%;
+    background-size: cover;
+    img{
+      // height: 100%;
+      // width: auto;
+      // height: 100%;
+      // overflow: hidden;
+    }
+  }
+  &__content{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+  &__badge{
+    background-color: $color-swatch-caesar-2;
+    width: 32px;
+    height:32px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transform: translate(-50% , -50%);
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  }
+  &__title{
+    @include heading-tny;
+    margin-bottom: .5rem;
+  }
+  &__category{
+    @include subheading-tny;
+  }
+  a{
+    text-decoration: none !important;
+    color: black;
+  }
+}

@@ -1,0 +1,27 @@
+{% extends "base.twig" %}
+
+{% block content %}
+  {% include "partials/hero-svc.twig" %}
+  {% include "partials/twocol.twig" with {
+    lottie:'helpdesk',
+    textblock: post.meta("textblock1"),
+    direction: 'rtl',
+    id: 'svc1'
+  }  %}
+  {% include "partials/twocol.twig" with {
+    lottie:'onboarding',
+    textblock: post.meta("textblock2"),
+    id: 'svc2'
+  }  %}
+  {% include "partials/twocol.twig" with {
+    lottie:'security',
+    textblock: post.meta("textblock3"),
+    direction: 'rtl',
+    id: 'svc3'
+  }  %}
+  {% include "partials/twocol.twig" with {
+    lottie:'compliance',
+    textblock: post.meta("textblock4"),
+    id: 'svc4'
+  }  %}
+{% endblock %}

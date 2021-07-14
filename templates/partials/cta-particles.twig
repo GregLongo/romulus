@@ -1,0 +1,23 @@
+<div class='cta-particles'>
+  <span class='cta-particles__cta'>
+    <span class='cta-particles__text'>{{post.meta('cta-particles')}}</span>
+  {% if isArticle %}
+    <span class='cta-particles__text'>Subscribe</span>
+  {% endif %}
+  {% if calendly %}
+  <button href='' onclick="Calendly.initPopupWidget({url:'https://calendly.com/sentant-security/introductory-meeting'});return false;" class="button button--cta">
+      Schedule on Calendly
+  </button>
+  {% elseif mailcap %}
+    <span>
+      {% include 'partials/mailcap.twig' %}
+    </span>
+  {% elseif certs %}
+  <div class="certificate">
+    <img class="certificate__logo" src="{{theme.path}}/dist/svg/mbe2020.svg" alt="nmsdc logo" />
+    <img class="certificate__logo" src="{{theme.path}}/dist/svg/soc.svg" alt="aicpa-soc Logo" />
+  </div>
+  {% endif %}
+  </span>
+  <div  role="presentation" class="particles" id="particles-js"></div>
+</div>

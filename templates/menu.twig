@@ -1,0 +1,12 @@
+{% if menu %}
+	<ul class="{{class}}">
+	{% for item in items %}
+		<li class="{{ item.classes | join(' ') }}">
+			<a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+		</li>
+	{% endfor %}
+		<li>
+			<a href='' onclick="Calendly.initPopupWidget({url:'https://calendly.com/sentant-security/introductory-meeting'});return false;">Contact</a>
+		</li>
+	</ul>
+{% endif %}

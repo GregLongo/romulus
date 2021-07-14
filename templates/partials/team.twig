@@ -1,0 +1,35 @@
+<div class="team">
+<div class="team__scrim"> </div>
+  <div class="team__members">
+  <div class="team__header">
+    {# <div class="team__header-title">
+      Meet The Team
+    </div> #}
+  </div>
+    <div class="team__wrapper">
+
+    {% for teammate in post.meta('team') %}
+      {% if teammate != 'null' %}
+      <div class="team__teammate">
+      <div style="position:relative">
+          <div class="team__teammate-img" style="background-image: url({{Image(teammate.image).src}})" ></div>
+        </div>
+        <div class="team__teammate-name">{{teammate.name}}</div>
+        <div class="team__teammate-title">{{teammate.title}}</div>
+      </div>
+    {%  endif %}
+    {% endfor %}
+    </div>
+  </div>
+  <div class="team__bio">
+  {% for teammate in post.meta('team') %}
+    <div id="member-{{loop.index0 }}_content" class="team__teammate-bio">
+      <div class="team__teammate-img--lg" style="background-image: url({{Image(teammate.image).src}})" ></div>
+      <div class="team__teammate-name team__teammate-name--lg">{{teammate.name}}</div>
+      <div class="team__teammate-bio-text">
+        {{teammate.bio}}
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+</div>

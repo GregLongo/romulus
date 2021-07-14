@@ -1,0 +1,59 @@
+.symbols{
+  background: $color-swatch-caesar-3;
+  color: $text-color-light;
+  @include tablet{
+    height: 700px;
+  }
+  &__container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+    align-items: center;
+    height: 100%;
+    width: $container-lg;
+    padding-top: $section-spacer-default;
+    padding-bottom: $section-spacer-default;
+    margin: auto;
+    @include mobile{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include tablet{
+      grid-template-columns: repeat(4, 1fr);
+      padding: unset;
+    }
+    @include xl{
+      width: $container-xl;
+    }
+  }
+  &__block{
+    text-align: center;
+  }
+  &__heading{
+    @include heading-card;
+    margin-bottom: 1rem;
+    @include mobile{
+      @include heading-sm-lt;
+    }
+  }
+  &__text{
+    @include subheading-card;
+    @include mobile{
+      @include mob-body-txt-lt;
+    }
+  }
+  &__lottie{
+    height: 200px;
+    @include mobile{
+      margin-bottom: 4rem;
+    }
+    &#lottie-symbol1{
+      transform: scale(.9) translateY(-1.6rem) translateX(1.5rem);
+    }
+    &#lottie-symbol3{
+      transform: scale(.7);
+    }
+    &#lottie-symbol4{
+      transform: scale(.9);
+    }
+  }
+}

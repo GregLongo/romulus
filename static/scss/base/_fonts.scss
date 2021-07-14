@@ -1,0 +1,170 @@
+@mixin heading-lg-lt{
+  font-family: $font-heading;
+  font-weight: 400;
+  color: white;
+  font-size: 4em;
+}
+
+@mixin heading-mob-lt{
+  font-family: $font-heading;
+  font-weight: 400;
+  color: white;
+  font-size: 2.5em;
+}
+
+@mixin heading-md-lt{
+  font-family: $font-heading;
+  font-weight: 400;
+  color: white;
+  font-size: 2.3em;
+}
+
+@mixin heading-md{
+  font-family: $font-heading;
+  font-weight: 400;
+  font-size: 2.3em;
+}
+
+@mixin heading-sm-lt{
+  font-family: $font-heading;
+  font-weight: 500;
+  color: white;
+  font-size: 2em;
+}
+
+@mixin heading-card{
+  font-family: $font-heading;
+  font-weight: 400;
+  color: white;
+  font-size: 1.4em;
+}
+
+@mixin subheading-card{
+  font-family: $font-text;
+  font-weight: 300;
+  color: white;
+  font-size: 1.2em;
+}
+
+@mixin heading-section{
+  font-family: $font-heading;
+  font-weight: 400;
+  font-size: 3.5em;
+}
+
+@mixin subheading-section{
+  font-family: $font-subheading;
+  font-size: 1.5em;
+}
+
+@mixin subheading-main-lt{
+  font-family: $font-subheading;
+  font-size: 2em;
+  color: white;
+}
+
+@mixin subheading-mob-lt{
+  font-family: $font-subheading;
+  font-size: 1.4em;
+  color: white;
+}
+
+@mixin heading-tny{
+  font-family: $font-heading;
+  font-weight: 300;
+  font-size: 1em;
+}
+
+@mixin heading-mob-tny{
+  font-family: $font-heading;
+  font-weight: 300;
+  font-size: .85em;
+}
+
+@mixin subheading-tny{
+  font-family: $font-subheading;
+  font-size: .85em;
+}
+
+@mixin body-txt-lt{
+  font-family: $font-text;
+  font-size: 1.5em;
+  font-weight: 300;
+  line-height: 1.5em;
+  color: white;
+}
+
+@mixin body-txt{
+  font-family: $font-text;
+  font-size: 1.5em;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+@mixin body-txt-blog{
+  font-family: $font-text;
+  font-size: 1.5em;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+@mixin mob-body-txt-blog{
+  font-family: $font-text;
+  font-size: 1.2em;
+  font-weight: 300;
+  line-height: 1.4em;
+}
+
+
+@mixin mob-body-txt{
+  font-family: $font-text;
+  font-size: 1.3em;
+  font-weight: 300;
+  line-height: 1.4em;
+}
+
+@mixin mob-body-txt-lt{
+  font-family: $font-text;
+  font-size: 1.3em;
+  font-weight: 300;
+  line-height: 1.4em;
+  color: white;
+}
+@mixin nav-link-lt{
+  font-family: $font-heading;
+  font-size: 1.4em;
+  font-weight: 300;
+  color: white;
+}
+
+@mixin cta-lt{
+  font-family: $font-heading;
+  font-size: 4em;
+  font-weight: 400;
+  color: white;
+}
+
+@mixin cta-mob-lt{
+  font-family: $font-heading;
+  font-size: 3em;
+  font-weight: 400;
+  color: white;
+}
+
+@mixin quote-txt{
+  font-style: italic;
+  font-family: $font-text;
+  font-weight: 500;
+  line-height: 1.8em;
+  color: white;
+}
+
+@mixin btntxt{
+  font-family: $font-subheading;
+  font-size: 2.5em;
+}
+
+@mixin btntxt-mob{
+  font-family: $font-subheading;
+  font-size: 1.5em;
+}

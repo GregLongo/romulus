@@ -1,0 +1,61 @@
+#mc_embed_signup{
+	display: flex;
+	justify-content: center;
+	height: 100%;
+  margin-top: 1rem;
+	@include tablet{
+		justify-content: flex-start;
+	}
+}
+
+#mc_embed_signup_scroll{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	@include tablet{
+		flex-direction: row;
+		align-items: flex-end;
+	}
+}
+
+.mc-field-group{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	label{
+		color: white;
+		font-size: 16px;
+	}
+}
+
+.email{
+	height: 32px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 2em;
+	border: none;
+	text-align: left;
+  padding-left: 1em;
+  padding-right: 1em;
+	@include tablet{
+		width: 480px;
+    height: 48px;
+		margin: 0 2em 0 0;
+	}
+}
+
+#mc-embedded-subscribe{
+  font-size: 24px;
+  color: white;
+	display: flex;
+	height: 48px;
+  width: 220px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+  background-color: $color-swatch-caesar-3;
+	&:hover{
+		background-color: $color-swatch-caesar-2;
+	}
+}

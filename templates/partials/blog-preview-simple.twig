@@ -1,0 +1,11 @@
+
+  <div class="blog-preview__container--generic">
+  	{% for post in subset %}
+      <a href="{{post.link}}" class="blog-preview" style="background-image:url({{post.thumbnail.src}})" >
+				<div class="blog-preview__content">
+        	<div class="blog-preview__title">{{post.title}}</div>
+					<div class="blog-preview__excerpt">{{post.preview.length(10).read_more(false)}}</div>
+				</div>
+			</a>
+  	{% endfor %}
+  </div>

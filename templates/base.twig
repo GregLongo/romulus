@@ -1,0 +1,57 @@
+{% block html_head_container %}
+
+{% include 'html-header.twig' %}
+	{% block head %}
+	{% endblock %}
+	</head>
+{% endblock %}
+
+	<body class="{{body_class}}" data-template="base.twig">
+		<header class="header" >
+			{% block header %}
+				<div class="header__wrapper">
+				{% if custom_logo_url %}
+							<a class="header__logo-link" href="{{site.url}}" aria-label="Return Home"  rel="home">
+								<img class="header__logo" src="{{ custom_logo_url }}" alt="Sentant Logo" />
+							</a>
+				{% else %}
+					<div class="header__logo" role="banner">
+						<a class="header__logo-link" href="{{site.url}}"  aria-label="Return Home" rel="home">{{site.name}}</a>
+					</div>
+				{%  endif %}
+				{# using hamburgers.js, hamburger style via bem modifier how cool #}
+					<a href="#nav-mobile" class="hamburger hamburger--collapse" type="button" aria-label="Menu" aria-controls="navigation">
+					  <span class="hamburger-box">
+					    <span class="hamburger-inner"></span>
+					  </span>
+					</a>
+					<nav id="nav-main" class="nav nav--main" role="navigation">
+						{% include "menu.twig" with {'items': menu.get_items} %}
+					</nav><!-- #nav -->
+					<nav id="nav-mobile" class="nav--mobile" >
+						{% include "menu.twig" with {'items': menu.get_items} %}
+					</nav><!-- #nav -->
+				</div>
+			{% endblock %}
+		</header>
+		<section id="content" role="main" class="content-wrapper">
+			<div class="wrapper {{sidebar_class}}">
+				{% block content %}
+					Sorry, no content
+				{% endblock %}
+			</div>
+			{% if sidebar %}
+				<aside class="layout-sidebar">
+					{{sidebar}}
+				</aside>
+			{% endif %}
+		</section>
+
+		{% block footer %}
+			<footer id="footer">
+				{% include 'footer.twig' %}
+			</footer>
+			{{ function('wp_footer') }}
+		{% endblock %}
+	</body>
+</html>

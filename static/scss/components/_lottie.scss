@@ -1,0 +1,87 @@
+.lottie{
+  &--lg{
+    transition: all .2s ease;
+    transform-origin: center;
+    transform: scale(1.2) translateY(-5%);
+    @include tablet{
+      transform: scale(1.3) translateY(0);
+    }
+  }
+  &--md{
+    transform:scale(.7)
+  }
+}
+
+#lottie{
+  &-main1{
+    transform: translateY(5%);
+    transform: scale(1);
+    @include mobile{
+      transform: scale(1);
+    }
+    @include tablet{
+      transform: scale(1.3) translateY(-10%);
+    }
+    @include desktop{
+      transform: scale(1.25) translateY(-4%);
+    }
+  }
+  &-main2{
+    @include mobile{
+      transform: scale(1.1);
+    }
+    @include tablet{
+      transform: scale(1.3) translateY(0);
+    }
+  }
+  &-helpdesk{
+    transform: scale(1);
+    @include desktop{
+      transform: scale(1);
+    }
+  }
+  &-onboarding{
+    transform: scale(1) translateY(-25%);
+    @include desktop{
+      transform: scale(1) translateY(15%);
+    }
+  }
+  &-security{
+    transform: scale(.9);
+    @include desktop{
+      transform: scale(1);
+    }
+  }
+  &-compliance{
+    transform: scale(1);
+    @include desktop{
+      transform: scale(.9);
+    }    // @include tablet{
+    //   transform: scale(1.3) translateY(25%);
+    // }
+  }
+  &-team{
+    transform: scale(.8) translateY(-25%);
+    @include mobile{
+      transform: scale(.6) translateY(-15%);
+    }
+    @include tablet{
+      transform: scale(.6) translateY(-30%);
+    }
+  }
+  &-messages{
+    transform: scale(.8);
+    @include mobile{
+      transform: scale(.8);
+    }
+    @include tablet{
+      transform: scale(.8);
+    }
+    @include desktop{
+      transform: scale(.8);
+    }
+    @include widescreen{
+      transform: scale(.6);
+    }
+  }
+}

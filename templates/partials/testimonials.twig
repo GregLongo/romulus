@@ -1,0 +1,48 @@
+<div class="testimonials">
+<div class="testimonials__header">
+		<div class="section-heading--lt">
+			{% include 'partials/section-header.twig' with {
+			title:'Testimonials',
+			subtitle: 'From Satisfied Clients',
+			} %}
+		</div>
+	</div>
+<div class="testimonials__container">
+<div class="testimonials__quote" style="background-image:url({{Image(post.meta('testimonial1').bg).src}})">
+  <div class="testimonials__scrim" style="background-color: #275D5EE6">
+  <div class=testimonials__content>
+     <div class="testimonials__text">{{ post.meta('testimonial1').text }}</div>
+     <div class="testimonials__person">{{ post.meta('testimonial1').person }}</div>
+     <div class="testimonials__industry">{{ post.meta('testimonial1').industry }}</div>
+   </div>
+  </div>
+</div>
+  <div class="testimonials__quote" style="background-image:url({{Image(post.meta('testimonial2').bg).src}})">
+    <div class="testimonials__scrim" style="background-color: #3E58FFE6">
+      <div class=testimonials__content>
+    	   <div class="testimonials__text">{{ post.meta('testimonial2').text }}</div>
+         <div class="testimonials__person">{{ post.meta('testimonial2').person }}</div>
+         <div class="testimonials__industry">{{ post.meta('testimonial2').industry }}</div>
+       </div>
+     </div>
+  </div>
+  <div class="testimonials__quote" style="background-image:url({{Image(post.meta('testimonial3').bg).src}})">
+    <div class="testimonials__scrim" style="background-color:#3E58FFE6">
+    <div class=testimonials__content>
+    	   <div class="testimonials__text">{{ post.meta('testimonial3').text }}</div>
+         <div class="testimonials__person">{{ post.meta('testimonial3').person }}</div>
+         <div class="testimonials__industry">{{ post.meta('testimonial3').industry }}</div>
+       </div>
+    </div>
+  </div>
+  <div class="testimonials__quote" style="background-image:url({{Image(post.meta('testimonial4').bg).src}})">
+    <div class="testimonials__scrim" style="background-color: #275D5EE6">
+    <div class=testimonials__content>
+  	   <div class="testimonials__text">{{ post.meta('testimonial4').text }}</div>
+       <div class="testimonials__person">{{ post.meta('testimonial4').person }}</div>
+       <div class="testimonials__industry">{{ post.meta('testimonial4').industry }}</div>
+     </div>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,41 @@
+.marquis{
+  min-width: 0;
+  &__title{
+    @include heading-mob-lt;
+    white-space: normal;
+    margin-bottom: 1.5rem;
+    @include desktop{
+      @include heading-lg-lt;
+    }
+    @include tablet{
+      white-space: nowrap;
+    }
+	 }
+  &__subtitle{
+    @include subheading-mob-lt;
+    margin-bottom: 1.5rem;
+    white-space: normal;
+    @include tablet{
+      white-space: nowrap;
+    }
+    @include desktop{
+      @include subheading-main-lt;
+    }
+  }
+  &__blurb{
+  @include mob-body-txt-lt ;
+   margin-bottom: 1.5rem;
+   @include desktop{
+     @include body-txt-lt ;
+   }
+  }
+}
+
+
+.single-post{
+  .marquis__title{
+    @include tablet{
+      white-space: normal;
+    }
+  }
+}

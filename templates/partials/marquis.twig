@@ -1,0 +1,16 @@
+<div class="marquis" >
+		<div class=marquis__title>
+			{{post.meta('marquis-title')}}
+		</div>
+    <div class=marquis__subtitle>
+      {{post.meta('marquis-subtitle')}}
+    </div>
+    <div class=marquis__blurb>
+      {{post.meta('marquis-blurb')}}
+    </div>
+    {% if cta == 'visible' %}
+		  <button onclick="Calendly.initPopupWidget({url:'https://calendly.com/sentant-security/introductory-meeting'});return false;" class="button button--cta">
+				 	{{post.meta('cta-text')}}</a>
+		  </button>
+    {% endif %}
+	</div>
