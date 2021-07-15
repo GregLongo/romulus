@@ -1,7 +1,7 @@
 .hero{
   width: 100%;
   height: $hero-height-mobile;
-  margin-bottom: $section-spacer-default * .7;
+  margin-bottom: $section-spacer-default * .2;
   @include mobile{
     height: $hero-height;
     margin-bottom: $section-spacer-default * 2;
@@ -86,9 +86,9 @@
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 2rem;
     width: 100%;
-    height: 480px;
+    height: 400px;
     font-weight: 700;
-    margin-top: 0;
+    margin-top: -10rem;
     font-size: 1.5em;
     font-family: $font-heading;
     @include mobile{
@@ -96,8 +96,10 @@
     }
     @include tablet{
       margin-left: auto;
-      margin-top: 8rem;
-      width: 95%;
+      margin-top: 6rem;
+      width: 90%;
+      height: 320px;
+
     }
     @include xl{
       width: 75%;
@@ -145,7 +147,7 @@
     }
   }
   &--svc{
-      margin-bottom: 10rem;
+      margin-bottom: 0;
       @include mobile{
         // height: $hero-height-mobile/1.3;
         margin-bottom: 0rem;
