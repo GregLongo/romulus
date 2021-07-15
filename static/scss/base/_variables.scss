@@ -64,7 +64,7 @@ $header-logo-height-mobile: 56px;
 $header-logo-height-tablet: 64px;
 $header-bg-fixed: white;
 $header-fixed-shadow: 0px 0px 4px 4px rgba(41,41,41,.05);
-$header-height-fixed: $header-height/2;
+$header-height-fixed: $header-height * .5;
 $header-logo-fixed-scale-factor: .8;
 
 //Footer____________
