@@ -32,7 +32,7 @@
     margin-right: auto;
     color: $text-color-light;
     z-index: 2;
-    padding-top: $header-height/1.5;
+    padding-top: $header-height * .666;
     grid-gap: 2rem;
     @include tablet{
       grid-template-columns: repeat(2, 1fr);
@@ -43,7 +43,7 @@
       width: $container-xl;
     }
     &--post{
-      height: $hero-height - $header-height/1.5;
+      height: $hero-height - $header-height * .666;
       display: block;
       @include tablet{
         height: auto;
@@ -141,7 +141,7 @@
     width: 100%;
     position: absolute;
     z-index: 0;
-    height: $hero-height/1.5;
+    height: $hero-height * .666;
     @include tablet{
       height: $hero-height;
     }

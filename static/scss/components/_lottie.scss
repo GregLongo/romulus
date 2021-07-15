@@ -20,7 +20,7 @@
       transform: scale(1.1);
     }
     @include tablet{
-      transform: scale(1.2) translateY(-10%);
+      transform: scale(1.2) translateY(-15%);
     }
     @include desktop{
       transform: scale(1.2) translateY(-8%);

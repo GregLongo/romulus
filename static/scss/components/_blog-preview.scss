@@ -180,8 +180,8 @@
 
   }
   &--home{
-    margin-bottom: $section-spacer-default/2;
-    margin-top: $section-spacer-default/2;
+    margin-bottom: $section-spacer-default * 0.5;
+    margin-top: $section-spacer-default * 0.5;
     @include tablet{
       margin-bottom: $section-spacer-default;
     }

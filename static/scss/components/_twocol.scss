@@ -14,7 +14,7 @@
       height: 824px;
     }
     @include tablet{
-      height: 640px;
+      height: 700px;
       grid-template-columns: repeat(2, 1fr);
       grid-column-gap: 2em;
     }
@@ -42,7 +42,7 @@
           height: 824px;
         }
         @include tablet{
-          height: 640px;
+          height: 700px;
         }
         @include widescreen{
           height: 720px;

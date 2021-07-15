@@ -110,18 +110,17 @@ wp_register_script('calendly', 'https://assets.calendly.com/assets/external/widg
 wp_enqueue_script('calendly' , 'async');
 
 //analytics (dummy tracker)
-
 function add_analytics(){ ?>
-	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XTGGH3WXN"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XTGGH3WXN"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 
 		gtag('config', 'G-4XTGGH3WXN');
-	</script> -->
+	</script>
 	<?php }
-// add_action('wp_head', 'add_analytics');
+add_action('wp_head', 'add_analytics');
 
 //acf options page
 if( function_exists('acf_add_options_page') ) {
