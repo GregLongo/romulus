@@ -123,9 +123,9 @@
     z-index: 2;
     position: relative;
     margin-bottom: .5rem;
-    @include heading-card;
+    @include heading-tny;
     @include tablet{
-      @include heading-mob-tny;
+      @include heading-tny;
     }
     @include widescreen{
       @include heading-card;

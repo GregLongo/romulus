@@ -41,6 +41,7 @@
     }
     @include xl{
       width: $container-xl;
+      padding-top: $header-height * 1.5;
     }
     &--post{
       display: block;
@@ -128,12 +129,12 @@
     }
   }
   &--post{
-    height: $hero-height - $header-height * .666;
+    height: $hero-height * .666;
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 0;
     @include tablet{
-      height: auto;
+      height: $hero-height;
       margin-bottom: inherit;
     }
   }
