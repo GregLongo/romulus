@@ -150,11 +150,14 @@
   }
   &--svc{
       // height: unset;
-      margin-bottom: 30%;
+      margin-bottom: 40%;
+      @include small{
+        margin-bottom: 30%;        
+      }
       @include mobile{
         margin-bottom: 0rem;
       }
-    @include mobile{
+    @include desktop{
       margin-bottom: -10rem;
       // height: $hero-height-mobile;
 
