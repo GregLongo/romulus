@@ -42,4 +42,11 @@ animations.forEach(function(anim){
 
   $("svg").attr('aria-label','vector animation')
 
+
+
+  if ($(window).width() < 768) {
+    $("#lottie-main1").detach().appendTo(".marquis__subtitle");
+  }
+
+
 });
