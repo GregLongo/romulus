@@ -4,7 +4,6 @@
 @import 'base/fonts';
 @import 'base/variables';
 @import 'base/mixins-layout';
-@import 'base/mixins-misc';
 @import 'base/resets';
 @import 'base/globals';
 
@@ -29,19 +28,12 @@
 @import 'components/marquis';
 @import 'components/button';
 
-//
-// //==============================================================================
-// // Layouts
-// //==============================================================================
-// @import 'layouts/pages';
-// @import 'layouts/posts';
+
 // //==============================================================================
 // // Pages
 // //==============================================================================
-// @import 'pages/home';
 @import 'pages/404';
-// @import 'pages/about';
-//
+
 // //==============================================================================
 // // Plugins
 // //==============================================================================
@@ -49,10 +41,3 @@
 @import 'plugins/hamburgers/hamburgers';
 @import 'plugins/calendly';
 @import 'plugins/mailcap';
-//
-// //==============================================================================
-// // Utilities
-// //==============================================================================
-//
-// @import 'utilities/tinymce';
-// @import 'components/newsletter';

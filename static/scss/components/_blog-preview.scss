@@ -1,216 +1,218 @@
-.blog-preview{
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: flex-end;
-    height: 80vw;
-    @include small{
-      height: 40vw;
-    }
-    @include tablet{
-      height: 20vw;
-    }
-    &:nth-child(1n + 1 ){
-      .blog-preview__content:before{
-        background-color: $color-swatch-caesar-1;
-      }
-   }
-    &:nth-child(1n + 2){
-      .blog-preview__content:before{
-        background-color: $color-swatch-caesar-2;
-      }
-   }
-   &:nth-child(1n + 3){
-     .blog-preview__content:before{
-       background-color: $color-swatch-caesar-3;
-     }
+.blog-preview {
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  height: 80vw;
+  @include small {
+    height: 40vw;
   }
-  &:nth-child(1n + 4){
-    .blog-preview__content:before{
+  @include tablet {
+    height: 20vw;
+  }
+  &:nth-child(1n + 1) {
+    .blog-preview__content:before {
+      background-color: $color-swatch-caesar-1;
+    }
+  }
+  &:nth-child(1n + 2) {
+    .blog-preview__content:before {
+      background-color: $color-swatch-caesar-2;
+    }
+  }
+  &:nth-child(1n + 3) {
+    .blog-preview__content:before {
+      background-color: $color-swatch-caesar-3;
+    }
+  }
+  &:nth-child(1n + 4) {
+    .blog-preview__content:before {
       background-color: $color-swatch-caesar-4;
     }
- }
-    &__content{
-      height: 96px;
+  }
+  &__content {
+    height: 96px;
+    width: 100%;
+    padding: 2rem 2rem 2rem 2rem;
+    color: white;
+    position: relative;
+    &:before {
+      content: "";
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      position: absolute;
+      background-color: $color-swatch-caesar-4;
+      height: 100%;
       width: 100%;
-      padding: 2rem 2rem 2rem 2rem;
-      color:  white;
-      position: relative;
-      &:before{
-        content: '';
-        bottom: 0;
-        left: 0;
-        z-index: 1;
-        position: absolute;
-        background-color: $color-swatch-caesar-4;
-        height: 100%;
-        width: 100%;
-        clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
-        opacity: .7;
-        transition: .14s ease;
-      }
-      &--recent{
-        width: 60%;
-        margin-right: auto;
-        margin-left: auto;
-        transform: translateY(25%);
-        &:before{
-            opacity: 1;
-        }
-      }
-      &--nobg{
-        height: 80px;
-        &:before{
-          background-color: transparent !important;
-          background: linear-gradient(0deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,0) 80%) ;
-        }
+      clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+      opacity: 0.7;
+      transition: 0.14s ease;
+    }
+    &--recent {
+      width: 60%;
+      margin-right: auto;
+      margin-left: auto;
+      transform: translateY(25%);
+      &:before {
+        opacity: 1;
       }
     }
-    &__container{
-      &--generic{
-        width: $container-lg;
-        margin-right: auto;
-        margin-left: auto;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 2rem;
-        @include small{
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: repeat(2, 1fr);
-        }
-        @include tablet{
-          grid-template-columns: repeat(4, 1fr);
-          grid-template-rows: repeat(1, 1fr);
-        }
-        @include xl{
-          width: $container-xl;
-        }
+    &--nobg {
+      height: 80px;
+      &:before {
+        background-color: transparent !important;
+        background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.5) 0%,
+          rgba(0, 0, 0, 0) 80%
+        );
       }
     }
-    &__list{
+  }
+  &__container {
+    &--generic {
       width: $container-lg;
       margin-right: auto;
       margin-left: auto;
-      transform: translateY(-50%);
-      z-index: 5;
-      @include xl{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 2rem;
+      @include small {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+      }
+      @include tablet {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+      }
+      @include xl {
         width: $container-xl;
       }
-      &--more{
-        transform: unset;
-      }
     }
-  &__page{
+  }
+  &__list {
+    width: $container-lg;
+    margin-right: auto;
+    margin-left: auto;
+    transform: translateY(-50%);
+    z-index: 5;
+    @include xl {
+      width: $container-xl;
+    }
+    &--more {
+      transform: unset;
+    }
+  }
+  &__page {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 2rem;
 
-    @include small{
+    @include small {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
     }
-    @include tablet{
+    @include tablet {
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(1, 1fr);
     }
-    &--more{
+    &--more {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
       grid-gap: 2rem;
     }
   }
-  &__title{
+  &__title {
     z-index: 2;
     position: relative;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     @include heading-tny;
-    @include tablet{
+    @include tablet {
       @include heading-tny;
     }
-    @include widescreen{
+    @include widescreen {
       @include heading-card;
     }
   }
-  &__excerpt{
+  &__excerpt {
     z-index: 2;
     position: relative;
   }
-  &__most-recent{
+  &__most-recent {
     width: $container-lg;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: $section-spacer-default;
     display: grid;
-     justify-content: space-between;
-     grid-template-columns:  40% 40%;
-     z-index: 3;
-     @include xl{
-       width: $container-xl;
-     }
-     &-1{
-       .blog-preview__content.blog-preview__content:before{
-         background-color: $color-swatch-caesar-2;
-       }
-       transform: translateY(-25%);
-     }
-     &-2{
-       .blog-preview__content.blog-preview__content:before{
-         background-color: $color-swatch-caesar-3;
-       }
-       transform: translateY(-10%);
-     }
+    justify-content: space-between;
+    grid-template-columns: 40% 40%;
+    z-index: 3;
+    @include xl {
+      width: $container-xl;
+    }
+    &-1 {
+      .blog-preview__content.blog-preview__content:before {
+        background-color: $color-swatch-caesar-2;
+      }
+      transform: translateY(-25%);
+    }
+    &-2 {
+      .blog-preview__content.blog-preview__content:before {
+        background-color: $color-swatch-caesar-3;
+      }
+      transform: translateY(-10%);
+    }
   }
-  &__misc{
+  &__misc {
     display: grid;
     grid-template-columns: 60% 40%;
     margin-top: $section-spacer-default;
     margin-bottom: $section-spacer-default;
     margin-right: 2rem;
-    @include xl{
+    @include xl {
       width: $container-lg;
       margin-right: auto;
       margin-left: auto;
-      }
     }
-    &__ranking{
-
-    }
-  &--recent{
-    height: 360px;
-
   }
-  &--home{
+  &__ranking {
+  }
+  &--recent {
+    height: 360px;
+  }
+  &--home {
     margin-bottom: $section-spacer-default * 0.5;
     margin-top: $section-spacer-default * 0.5;
-    @include tablet{
+    @include tablet {
       margin-bottom: $section-spacer-default;
     }
   }
-  &:hover{
+  &:hover {
     cursor: pointer;
-    .blog-preview__content:before{
-     clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
-     height: 102%;
-   }
+    .blog-preview__content:before {
+      clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+      height: 102%;
+    }
   }
 }
 
-.blog{
-  &__desktop-content{
+.blog {
+  &__desktop-content {
     display: none;
-    @include tablet{
-      display:block;
+    @include tablet {
+      display: block;
     }
   }
-  &__mobile-content{
+  &__mobile-content {
     display: block;
-    @include tablet{
-      display:none;
+    @include tablet {
+      display: none;
     }
-    .blog-preview__container--generic{
+    .blog-preview__container--generic {
       margin-top: 2rem;
       margin-bottom: 2rem;
-      @include tablet{
+      @include tablet {
         margin-top: $section-spacer-default;
         margin-bottom: $section-spacer-default;
       }

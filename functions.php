@@ -14,7 +14,6 @@ if ( ! class_exists( 'Timber' ) ) {
 
 Timber::$dirname = array('templates', 'views');
 
-
 class StarterSite extends Timber\Site {
 	/** Add timber support. */
 	function __construct() {
@@ -28,15 +27,6 @@ class StarterSite extends Timber\Site {
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
 		parent::__construct();
-	}
-
-	function register_post_types() {
-		//this is where you can register custom post types
-
-	}
-
-	function register_taxonomies() {
-		//this is where you can register custom taxonomies
 	}
 
 	function add_to_context( $context ) {
@@ -109,7 +99,6 @@ return $excerpt;
 wp_register_script('calendly', 'https://assets.calendly.com/assets/external/widget.js');
 wp_enqueue_script('calendly' , 'async');
 
-//analytics (dummy tracker)
 function add_analytics(){ ?>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XTGGH3WXN"></script>
 	<script>
@@ -135,19 +124,6 @@ function moshe_timber_context( $context ) {
     $context['options'] = get_fields('option');
     return $context;
 }
-
-//fontawesome (deprecated?)
-
-// function load_icons() {
-// 	wp_enqueue_style(
-// 		'font-awesome-5',
-// 		'https://use.fontawesome.com/releases/v5.15.3/css/all.css',
-// 		array(),
-// 		'5.15.3'
-// 	);
-// }
-//
-// add_action('wp_enqueue_scripts', 'load_icons');
 
 if( function_exists('acf_add_local_field_group') ):
 

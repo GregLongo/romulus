@@ -2,19 +2,11 @@
   &--lg{
     transition: all .2s ease;
     transform-origin: center;
-  //   transform: scale(1.2) translateY(-5%);
-  //   @include tablet{
-  //     transform: scale(1.3) translateY(0);
-  //   }
-  // }
-  // &--md{
-  //   transform:scale(.7)
   }
 }
 
 #lottie{
   &-main1{
-    // transform: translateY(5%);
     transform: scale(1.1) translateY(4%);
     @include mobile{
       transform: scale(1.1);
@@ -62,9 +54,7 @@
     transform: scale(1);
     @include mobile{
       transform: scale(.9);
-    }    // @include tablet{
-    //   transform: scale(1.3) translateY(25%);
-    // }
+    }
   }
   &-team{
     transform: scale(.6) translateY(-35%);

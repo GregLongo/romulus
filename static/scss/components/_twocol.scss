@@ -78,10 +78,6 @@
       &__heading{
         @include heading-md;
         margin-bottom: 1.5rem;
-        // padding-top: 4rem;
-        @include tablet{
-          // padding-top: unset;
-        }
       }
       &__text{
         @include mob-body-txt;
@@ -92,34 +88,3 @@
     }
   }
 }
-//
-//
-// .svg__col{
-//   .two-col{
-//     &__wrapper{
-//     height: 560px;
-//     @include mobile{
-//       height: 720px;
-//       }
-//     @include desktop{
-//       height: unset;
-//       }
-//       @include xl{
-//         height: 560px;
-//       }
-//     }
-//     // &__lottie{
-//     //   max-height: 280px;
-//     //   @include tablet{
-//     //     max-height: unset;
-//     //   }
-//     // }
-//   }
-//   &:first-of-type{
-//     .two-col{
-//       &__wrapper{
-//         margin-top: 3rem;
-//       }
-//     }
-//   }
-// }

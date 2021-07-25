@@ -6,4 +6,3 @@ import 'particles.js';
 import './load-particles';
 import './team';
 import './list-posts';
-comsole.log('meow')
