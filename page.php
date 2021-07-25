@@ -25,7 +25,6 @@ $context = Timber::context();
 
 $timber_post     = new Timber\Post();
 
-
 $context['post'] = $timber_post;
 
 //query top posts
@@ -54,6 +53,5 @@ $all_posts_args = array(
 );
 $all_posts_loop = Timber::get_posts($all_posts_args);
 $context ['allposts'] =$all_posts_loop;
-
 
 Timber::render( array( 'page-' . $timber_post->post_name . '.twig', 'page.twig' ), $context );

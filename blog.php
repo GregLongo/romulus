@@ -13,6 +13,4 @@ $recent_posts_loop = Timber::get_posts($popular_posts_args);
 
 $context ['allposts'] =$recent_posts_loop;
 
-
-
-	Timber::render( 'blog.twig', $context );
+Timber::render( 'blog.twig', $context );

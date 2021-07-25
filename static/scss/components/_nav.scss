@@ -7,10 +7,6 @@
 		display: none !important;
 	}
 }
-
-// apparently you can style hamburgers.js via variables
-// in a hamburgers-settings.scss file. refer to docs for specifics
-// overriding here just cause
 .hamburger-inner,
 .hamburger-inner::before,
 .hamburger-inner::after,{
@@ -26,7 +22,6 @@
 .nav{
     display:none;
     li {
-    	// transition: all .2s ease;
     	border-radius: 10px 10px 0 0;
 		&:hover a{
 			color: $nav-menu-link-color-hover;

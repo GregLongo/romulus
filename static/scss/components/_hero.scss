@@ -20,12 +20,9 @@
     margin-bottom: $section-spacer-default;
   }
   &__container{
-    // overflow-x: hidden;
-    // overflow-y: hidden;
     position: relative;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    // align-items: center;
     height: 100%;
     max-width: $container-lg;
     margin-left: auto;
@@ -66,18 +63,12 @@
       height: $hero-height-mobile;
       width: 100%;
       background: linear-gradient(201deg, rgba(2,0,36,1) 0%, rgba(0,136,255,1) 100%);
-      // @include mobile{
-      //   height: $hero-height * 1.7;
-      // }
       @include mobile{
         height: $hero-height;
       }
       @include tablet{
         height: $hero-height;
       }
-      // @include widescreen{
-      //   height: $hero-height * 1.02;
-      // }
     }
   }
   &__selector{
@@ -88,7 +79,6 @@
     width: 100%;
     height: 400px;
     font-weight: 700;
-    // margin-top: -10rem;
     font-size: 1.5em;
     font-family: $font-heading;
     @include mobile{
@@ -115,14 +105,12 @@
     flex-direction: column;
     text-align: center;
     color: #6fbbff;
-    // filter: drop-shadow( 2px 2px 0 $color-swatch-caesar-3);
     &:hover{
       color:  $color-swatch-caesar-2;
     }
     &-icon{
       font-size: 2.5em;
       margin-bottom: 2rem;
-      // filter: drop-shadow( 10px 8px 0 $color-swatch-caesar-3);
       @include desktop{
         font-size: 4em;
       }
@@ -149,7 +137,6 @@
     }
   }
   &--svc{
-      // height: unset;
       margin-bottom: 40%;
       @include small{
         margin-bottom: 30%;
@@ -159,11 +146,6 @@
       }
     @include desktop{
       margin-bottom: -10rem;
-      // height: $hero-height-mobile;
-
-    }
-    .hero__container{
-      // height: $hero-height-mobile/1.5;
     }
   }
 }
