@@ -7,7 +7,7 @@ mix.js('static/js/app.js', 'js')
 	.sass('static/scss/app.scss', 'css')
 	.setPublicPath('dist')
 	.browserSync( {
-		proxy:'http://sentant.local',//replace with local proxy. recommended download https://localwp.com/ for local server mgmt
+		proxy:'http://localhost:10003/',//replace with local proxy. recommended download https://localwp.com/ for local server mgmt
 		files:['static', 'templates', 'dist']
 	})
 	.autoload({
