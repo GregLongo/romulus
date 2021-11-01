@@ -1,6 +1,6 @@
 .cta-particles{
   width: 100%;
-  background: linear-gradient(201deg, rgba(2,0,36,1) 0%, rgba(0,136,255,1) 100%);
+  background: linear-gradient(201deg, rgba(0,11,51,1) 0%, rgba(0,127,241,1) 100%);
   &__cta{
     color: white;
     position: absolute;
@@ -24,7 +24,8 @@
   .button--cta{
     padding-left: 2rem;
     padding-right: 2rem;
-    width: 90%;
+    border-radius: 100%;
+	background: $color-swatch-caesar-2;
     @include tablet{
       width: initial;
     }

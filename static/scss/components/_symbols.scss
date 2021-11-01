@@ -1,5 +1,8 @@
 .symbols{
-  background: $color-swatch-caesar-3;
+	background-image: linear-gradient(201deg, #000b33 0%, #007ff1 100%);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
   color: $text-color-light;
   @include tablet{
     height: 700px;
