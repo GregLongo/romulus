@@ -1,0 +1,48 @@
+{% set schema = bolt.data.components["@bolt-components-carousel"].schema %}
+
+{# slides_per_view 'auto' is deprecated.  Only numbers are supported #}
+{% if slides_per_view == "auto" %}
+  {% set slides_per_view = 3 %}
+{% endif %}
+
+{% if slides_per_view == 1 %}
+  {% set slides_per_view = "1" %}
+{% elseif slides_per_view == 2 %}
+  {% set slides_per_view = "2" %}
+{% elseif slides_per_view == 3 %}
+  {% set slides_per_view = "3" %}
+{% elseif slides_per_view == 4 %}
+  {% set slides_per_view = "4" %}
+{% else %}
+  {% set slides_per_view = "1" %}
+{% endif %}
+
+{% if enable_json_schema_validation %}
+    {{ validate_data_schema(schema, _self) | raw }}
+{% endif %}
+
+
+{% set base_class = "c-bolt-carousel" %}
+{% set this = init(schema) %}
+{% set inner_attributes = create_attribute({}) %}
+
+<bolt-carousel {{ this.props }}>
+  {% block default_slot %}
+    {% for slide in slides %}
+      {% embed "@bolt-components-carousel/_carousel-slide.twig" %}
+        {% block default_slot %}
+          {{ slide }}
+        {% endblock %}
+      {% endembed %}
+    {% endfor %}
+  {% endblock %}
+
+  {% block controls %}
+    <span class="e-bolt-button e-bolt-button--border-radius-full e-bolt-button--secondary e-bolt-button--icon-only" aria-hidden="true" slot="previous-btn">
+      <span class="e-bolt-button__icon-center"><bolt-icon name="chevron-left"size="large"></bolt-icon></span>
+    </span>
+    <span class="e-bolt-button e-bolt-button--border-radius-full e-bolt-button--secondary e-bolt-button--icon-only" aria-hidden="true" slot="next-btn">
+      <span class="e-bolt-button__icon-center"><bolt-icon name="chevron-right"size="large"></bolt-icon></span>
+    </span>
+  {% endblock %}
+</bolt-carousel>

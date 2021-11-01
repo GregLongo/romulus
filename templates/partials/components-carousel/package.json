@@ -1,0 +1,66 @@
+{
+  "_from": "@bolt/components-carousel",
+  "_id": "@bolt/components-carousel@4.2.0",
+  "_inBundle": false,
+  "_integrity": "sha512-l1wF/SekKJk36mZHIBbc0WVDZKpHNVFHdWb0tG0LuAgQyNNfiCgSc2GojcRTFaJ1J0XWu6DlFDFY0vq1W6c6Ww==",
+  "_location": "/@bolt/components-carousel",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@bolt/components-carousel",
+    "name": "@bolt/components-carousel",
+    "escapedName": "@bolt%2fcomponents-carousel",
+    "scope": "@bolt",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@bolt/components-carousel/-/components-carousel-4.2.0.tgz",
+  "_shasum": "65d9c49605d7d0f1690c8cc34ee4a159115c5851",
+  "_spec": "@bolt/components-carousel",
+  "_where": "/Users/leon.shelhamer/Local Sites/sentant/app/public/wp-content/themes/romulus",
+  "author": {
+    "name": "Salem Ghoweri",
+    "email": "me@salemghoweri.com"
+  },
+  "bugs": {
+    "url": "https://github.com/bolt-design-system/bolt/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@bolt/components-button": "^4.2.0",
+    "@bolt/components-carousel": "^4.2.0",
+    "@bolt/core-v3.x": "^4.2.0",
+    "@bolt/lazy-queue": "^4.0.0",
+    "swiper": "^5.3.0"
+  },
+  "deprecated": false,
+  "description": "A web-component powered carousel component for cycling through a series of content such as images, text, or cards.",
+  "gitHead": "18ed66e2a2525eee8ee2207a2ddb581f0106e4bf",
+  "keywords": [
+    "bolt design system",
+    "carousel",
+    "design system",
+    "pattern lab",
+    "web component"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "@bolt/components-carousel",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bolt-design-system/bolt/tree/master/packages/components/bolt-carousel"
+  },
+  "schema": "carousel.schema.js",
+  "style": "index.scss",
+  "twig": "src/carousel.twig",
+  "version": "4.2.0"
+}

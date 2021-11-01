@@ -1,0 +1,80 @@
+@import '@bolt/core-v3.x';
+
+bolt-carousel-slide {
+  display: flex;
+  flex-basis: auto;
+  flex-direction: row; // make sure children fill height of container
+  flex-grow: 1;
+  flex-shrink: 0;
+  position: relative;
+  max-width: none;
+  transition: transform 0.2s ease;
+  scroll-snap-align: start;
+
+  &:not(.is-ready) {
+    flex-basis: 0;
+    flex-direction: column;
+    flex-shrink: 1;
+    box-sizing: content-box;
+    padding-right: var(--c-bolt-carousel-space-around);
+    padding-left: var(--c-bolt-carousel-space-around);
+  }
+
+  &:not(.is-ready):not(:last-of-type) {
+    margin-right: calc(
+      var(--c-bolt-carousel-space-between) - var(--c-bolt-carousel-space-around) *
+        2
+    );
+
+    bolt-carousel[space-between='small'] & {
+      margin-right: calc(
+        var(--c-bolt-carousel-space-between) -
+          var(--c-bolt-carousel-space-around) * 2
+      );
+    }
+
+    bolt-carousel[space-between='none'] & {
+      margin-right: calc(
+        var(--c-bolt-carousel-space-between) -
+          var(--c-bolt-carousel-space-around) * 2
+      );
+    }
+
+    bolt-carousel[space-between='large'] & {
+      margin-right: calc(
+        var(--c-bolt-carousel-space-between) -
+          var(--c-bolt-carousel-space-around) * 2
+      );
+    }
+  }
+
+  &:only-child {
+    width: 100%;
+  }
+
+  &:last-of-type {
+    margin-right: 0 !important;
+  }
+
+  bolt-card {
+    flex-grow: 1;
+  }
+}
+
+.c-bolt-carousel-slide,
+.c-bolt-carousel__slide {
+  flex-grow: 1;
+  flex-shrink: 0;
+  position: relative;
+  width: 100%;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+
+  .c-bolt-carousel--thumbnails & {
+    opacity: 0.4;
+    cursor: pointer;
+  }
+
+  &.c-bolt-carousel__slide--thumbnail-active {
+    opacity: 1;
+  }
+}

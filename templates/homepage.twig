@@ -2,9 +2,10 @@
 
 {% block content %}
   {% include "partials/hero-home.twig" %}
-  {% include "partials/twocol.twig" with {
-    lottie:'messages',
-    textblock: post.meta("textblock1"),
+
+  {% include "partials/empty.twig" with {
+    lottie:'main2',
+    textblock: post.meta("textblock2"),
     direction: 'rtl'
   }  %}
   {% include "partials/twocol.twig" with {
@@ -17,15 +18,12 @@
     {% include 'partials/section-header.twig' with {
     title:'Blog',
     subtitle: 'Insights From the Experts',
-    link: '/blog',
+	link: '/blog',
+	titleLink: '/blog',
     linktext: 'Check It Out',
-    button:'true'
+    button: false
     } %}
     {% include "partials/blog-preview-simple.twig" with {subset: recentposts} %}
-      <button class="button section-heading__button section-heading__button--mobile">
-          <a href='/blog'>check it out</a>
-      </button>
-    </diV>
-    {% include "partials/testimonials.twig" %}
+</div>
     {% include "partials/cta-particles.twig" with {certs:true} %}
 {% endblock %}

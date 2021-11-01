@@ -1,6 +1,14 @@
 <div class="section-heading">
   <div class="section-heading__content">
-  	<div class="section-heading__title">{{title}}</div>
+  	<div class="section-heading__title">
+		{% if titleLink %}
+		<a href="{{titleLink}}">
+		{% endif %}
+		{{title}}
+		{% if titleLink %}
+		</a>
+		{% endif %}
+	</div>
   	<div class="section-heading__subtitle">{{subtitle}}</div>
   </div>
   <div class="button section-heading__button section-heading__button--desktop">

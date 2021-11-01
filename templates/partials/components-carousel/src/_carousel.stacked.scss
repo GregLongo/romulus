@@ -1,0 +1,47 @@
+$bolt-carousel-stacked-small-overlap: var(--bolt-spacing-x-large);
+$bolt-carousel-stacked-medium-overlap: calc(
+  #{$bolt-carousel-stacked-small-overlap} * 1.5
+);
+$bolt-carousel-stacked-large-overlap: calc(
+  #{$bolt-carousel-stacked-medium-overlap} * 1.5
+);
+
+bolt-carousel[stacked] bolt-carousel-slide {
+  min-width: 240px;
+
+  @include bolt-mq($from: small) {
+    min-width: 320px;
+  }
+
+  &:not(:first-child):not(.is-ready) {
+    margin-left: calc(#{$bolt-carousel-stacked-small-overlap} * -1);
+
+    @include bolt-mq($from: small) {
+      margin-left: calc(#{$bolt-carousel-stacked-medium-overlap} * -1);
+    }
+
+    @include bolt-mq($from: medium) {
+      margin-left: calc(#{$bolt-carousel-stacked-large-overlap} * -1);
+    }
+  }
+
+  &:focus-within,
+  &:hover {
+    transform: translate(0, calc(var(--bolt-spacing-y-medium) * -1));
+
+    & ~ bolt-carousel-slide {
+      transform: translateX(calc(#{$bolt-carousel-stacked-small-overlap} / 2));
+
+      @include bolt-mq($from: small) {
+        transform: translateX(
+          calc(#{$bolt-carousel-stacked-medium-overlap} / 2)
+        );
+      }
+
+      @include bolt-mq($from: medium) {
+        transform: translateX(calc(#{$bolt-carousel-stacked-large-overlap} / 2))
+          translateX(var(--bolt-spacing-x-small));
+      }
+    }
+  }
+}
