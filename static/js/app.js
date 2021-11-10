@@ -6,3 +6,4 @@ import 'particles.js';
 import './load-particles';
 import './team';
 import './list-posts';
+import './show-on-click';
