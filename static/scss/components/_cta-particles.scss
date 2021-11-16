@@ -45,13 +45,21 @@
   margin-left:auto;
   margin-right:auto;
     width: 60%;
-  &__logo{
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
-    height: 80px;
-    @include mobile{
-      height: 120px;
+	&__logo{
+      width: auto;
+      margin-left: auto;
+      margin-right: auto;
+      height: 80px;
+      @include mobile{
+        height: 120px;
+      }
     }
+  span {
+	width: 100%;
+    display: inline-block;
+    visibility: hidden;
+	&.visible {
+	    visibility: visible;
+	}
   }
 }
