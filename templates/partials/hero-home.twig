@@ -1,6 +1,15 @@
-<div class="hero hero--gradient" >
-  <div class= hero__container>
-      {% include "partials/marquis.twig" with {cta:'visible'}%}
-      <div id="lottie-main1" class="lottie lottie--lg" aria-label="Animation of Sentant Engineers Supporting a Remote Startup" role="presentation"> </div>
-    </div>
+<div class="hero hero--gradient">
+	<div class="hero__container">
+		{% include "partials/marquis.twig" with {cta:'visible'}%}
+		<div id="lottie-main1" class="lottie lottie--lg" aria-label="Animation of Sentant Engineers Supporting a Remote Startup" role="presentation"></div>
+	</div>
+	<script>
+		// Hack to fix 100% height of parent in safari.
+		jQuery(document).ready(function($) {
+			if ($(window).width() > 767) {
+				let height = $('#lottie-main1').height();
+				$('#lottie-main1').height(height);
+			}
+		});
+	</script>
 </div>
