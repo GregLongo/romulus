@@ -1,10 +1,9 @@
 .testimonials{
-  background: #000b33;
   @include tablet{
   }
   &__header{
     padding-top: 3rem;
-    color: white;
+    color: $color-swatch-caesar-3;
     padding-bottom: 1rem;
     .section-heading__content{
       flex-direction: column;
@@ -49,7 +48,7 @@
   &__content{
     @include quote-txt;
     width: 80%;
-    color: white;
+    color: $color-swatch-caesar-3;
     padding-top: 1em;
     padding-bottom:1em;
     font-size: 1.2em;
