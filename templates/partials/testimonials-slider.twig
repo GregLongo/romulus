@@ -1,0 +1,37 @@
+<div class="testimonials">
+	<div class="glider-contain">
+		{% set testimonials = function('get_post_meta_regexp', [post.id, 'testimonial']) %}
+		<div class="glider">
+			{% for testimonial in testimonials %}
+				<div class="testimonials__quote">
+					<div class="testimonials__scrim">
+						<div class="testimonials__content">
+							<div class="testimonials__text">{{ post.meta(testimonial).text }}</div>
+							<div class="testimonials__person">{{ post.meta(testimonial).person }}</div>
+							<div class="testimonials__industry">{{ post.meta(testimonial).industry }}</div>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+
+		<button aria-label="Previous" class="glider-prev">«</button>
+		<button aria-label="Next" class="glider-next">»</button>
+		<div role="tablist" class="dots"></div>
+	</div>
+	<script>
+		window.addEventListener('load', function() {
+			new Glider(document.querySelector('.glider'), {
+				// Mobile-first defaults
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				scrollLock: true,
+				dots: '.dots',
+				arrows: {
+					prev: '.glider-prev',
+					next: '.glider-next'
+				}
+			});
+		});
+	</script>
+</div>
