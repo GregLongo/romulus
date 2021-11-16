@@ -2,6 +2,9 @@
   width: 100%;
   height: $hero-height-mobile;
   margin-bottom: $section-spacer-default * .2;
+  @include small{
+	height: 825px;
+  }
   @include mobile{
     height: $hero-height;
     margin-bottom: $section-spacer-default * 2;
@@ -60,13 +63,19 @@
       content: '';
       position: absolute;
       top: 0;
-      height: $hero-height-mobile;
+      height: 400px;
       width: 100%;
       background: linear-gradient(201deg, rgba(0,11,51,1) 0%, rgba(0,127,241,1) 100%);
-      @include mobile{
-        height: $hero-height;
+	  @include small{
+        height: 825px;
+      }
+	  @include mobile{
+        height: 400px;
       }
       @include tablet{
+        height: 625px;
+      }
+      @include desktop{
         height: $hero-height;
       }
     }
