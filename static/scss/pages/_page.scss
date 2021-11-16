@@ -1,0 +1,17 @@
+.page-content-wrapper{
+	width: $container-lg;
+	margin: 0 auto;
+	@include mobile{
+	  margin-top: 0px;
+	}
+	@include desktop{
+	  width: $container-xl;
+	  margin-top: -120px;
+	}
+	@include widescreen{
+	  margin-top: 0;
+	}
+	@include xl{
+	  margin-top: $section-spacer-default;
+	}
+}
