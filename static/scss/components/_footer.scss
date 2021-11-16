@@ -3,6 +3,7 @@
   align-items: center;
   background-color: $color-swatch-caesar-3;
   color: $text-color-light;
+  line-height: 2em;
   @include heading-mob-tny;
   @include mobile{
     height: $footer-height;
@@ -41,7 +42,7 @@
   }
   &__social-logo{
     font-size: 2em;
-    padding-left: 1em;
+    padding-left: 0.5em;
     &:hover{
       color: $color-swatch-caesar-2;
     }
@@ -55,5 +56,8 @@
     height: 32px;
     width: 32px;
     margin-left: 1rem;
+  }
+  .registered{
+	font-size: 1.225em;
   }
 }
